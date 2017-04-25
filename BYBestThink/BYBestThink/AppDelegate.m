@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "BYTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -15,8 +16,17 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{    
+    // 创建窗口
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    // 设置根控制器
+    BYTabBarController *tabBarVc = [[BYTabBarController alloc] init];
+    self.window.rootViewController = tabBarVc;
+    
+    // 显示窗口
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

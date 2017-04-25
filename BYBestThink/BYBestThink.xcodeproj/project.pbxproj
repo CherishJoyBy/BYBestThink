@@ -9,10 +9,9 @@
 /* Begin PBXBuildFile section */
 		49784C741EAE4E950023CCBE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49784C731EAE4E950023CCBE /* main.m */; };
 		49784C771EAE4E950023CCBE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49784C761EAE4E950023CCBE /* AppDelegate.m */; };
-		49784C7A1EAE4E950023CCBE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49784C791EAE4E950023CCBE /* ViewController.m */; };
 		49784C7D1EAE4E950023CCBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49784C7B1EAE4E950023CCBE /* Main.storyboard */; };
-		49784C7F1EAE4E950023CCBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49784C7E1EAE4E950023CCBE /* Assets.xcassets */; };
-		49784C821EAE4E950023CCBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49784C801EAE4E950023CCBE /* LaunchScreen.storyboard */; };
+		49C2D0521EAF12BD0092039A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49C2D0511EAF12BD0092039A /* Assets.xcassets */; };
+		49C2D0561EAF2AE80092039A /* BYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C2D0551EAF2AE80092039A /* BYTabBarController.m */; };
 		D40E269659FA02BAC5573BAD /* libPods-BYBestThink.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 678D6574E4183531125CC11D /* libPods-BYBestThink.a */; };
 /* End PBXBuildFile section */
 
@@ -21,12 +20,11 @@
 		49784C731EAE4E950023CCBE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		49784C751EAE4E950023CCBE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		49784C761EAE4E950023CCBE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		49784C781EAE4E950023CCBE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		49784C791EAE4E950023CCBE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		49784C7C1EAE4E950023CCBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		49784C7E1EAE4E950023CCBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		49784C811EAE4E950023CCBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49784C831EAE4E950023CCBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49C2D0511EAF12BD0092039A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		49C2D0541EAF2AE80092039A /* BYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYTabBarController.h; sourceTree = "<group>"; };
+		49C2D0551EAF2AE80092039A /* BYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYTabBarController.m; sourceTree = "<group>"; };
 		5A3BBC7BF35B6E8994951A6B /* Pods-BYBestThink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BYBestThink.release.xcconfig"; path = "Pods/Target Support Files/Pods-BYBestThink/Pods-BYBestThink.release.xcconfig"; sourceTree = "<group>"; };
 		678D6574E4183531125CC11D /* libPods-BYBestThink.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BYBestThink.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5C8632245AA4E3D827E8594 /* Pods-BYBestThink.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BYBestThink.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BYBestThink/Pods-BYBestThink.debug.xcconfig"; sourceTree = "<group>"; };
@@ -65,14 +63,7 @@
 		49784C711EAE4E950023CCBE /* BYBestThink */ = {
 			isa = PBXGroup;
 			children = (
-				49784C751EAE4E950023CCBE /* AppDelegate.h */,
-				49784C761EAE4E950023CCBE /* AppDelegate.m */,
-				49784C781EAE4E950023CCBE /* ViewController.h */,
-				49784C791EAE4E950023CCBE /* ViewController.m */,
-				49784C7B1EAE4E950023CCBE /* Main.storyboard */,
-				49784C7E1EAE4E950023CCBE /* Assets.xcassets */,
-				49784C801EAE4E950023CCBE /* LaunchScreen.storyboard */,
-				49784C831EAE4E950023CCBE /* Info.plist */,
+				49C2D0531EAF1EEC0092039A /* Classes */,
 				49784C721EAE4E950023CCBE /* Supporting Files */,
 			);
 			path = BYBestThink;
@@ -81,9 +72,23 @@
 		49784C721EAE4E950023CCBE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				49784C731EAE4E950023CCBE /* main.m */,
+				49784C7B1EAE4E950023CCBE /* Main.storyboard */,
+				49784C831EAE4E950023CCBE /* Info.plist */,
+				49C2D0511EAF12BD0092039A /* Assets.xcassets */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		49C2D0531EAF1EEC0092039A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				49784C751EAE4E950023CCBE /* AppDelegate.h */,
+				49784C761EAE4E950023CCBE /* AppDelegate.m */,
+				49C2D0541EAF2AE80092039A /* BYTabBarController.h */,
+				49C2D0551EAF2AE80092039A /* BYTabBarController.m */,
+				49784C731EAE4E950023CCBE /* main.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 		C15249EAB771FF7B30A10450 /* Pods */ = {
@@ -132,6 +137,7 @@
 		49784C671EAE4E940023CCBE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = BY;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = lby;
 				TargetAttributes = {
@@ -165,8 +171,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49784C821EAE4E950023CCBE /* LaunchScreen.storyboard in Resources */,
-				49784C7F1EAE4E950023CCBE /* Assets.xcassets in Resources */,
+				49C2D0521EAF12BD0092039A /* Assets.xcassets in Resources */,
 				49784C7D1EAE4E950023CCBE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -226,8 +231,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49784C7A1EAE4E950023CCBE /* ViewController.m in Sources */,
 				49784C771EAE4E950023CCBE /* AppDelegate.m in Sources */,
+				49C2D0561EAF2AE80092039A /* BYTabBarController.m in Sources */,
 				49784C741EAE4E950023CCBE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,14 +246,6 @@
 				49784C7C1EAE4E950023CCBE /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		49784C801EAE4E950023CCBE /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				49784C811EAE4E950023CCBE /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
