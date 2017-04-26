@@ -7,6 +7,7 @@
 //
 
 #import "BYTabBarController.h"
+#import "BYTabBar.h"
 
 @interface BYTabBarController ()
 
@@ -18,9 +19,22 @@
     [super viewDidLoad];
 
     // 设置所有UITabBarItem的文字属性
-     UITabBarItem *item = [UITabBarItem appearance];
+    [self setupItemTitleTextAttributes];
     
-    /** 文字属性 **/
+    // 添加子控制器
+    [self setupChildViewControllers];
+    
+    // 更换tabBar
+    [self setupTabBar];
+}
+
+#pragma mark - Custom Method
+
+// 设置所有UITabBarItem的文字属性
+- (void)setupItemTitleTextAttributes
+{
+    UITabBarItem *item = [UITabBarItem appearance];
+    
     // 普通状态下的文字属性
     NSMutableDictionary *normalAttrs = [NSMutableDictionary dictionary];
     normalAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:14];
@@ -31,12 +45,17 @@
     NSMutableDictionary *selectedAttrs = [NSMutableDictionary dictionary];
     selectedAttrs[NSForegroundColorAttributeName] = [UIColor darkGrayColor];
     [item setBadgeTextAttributes:selectedAttrs forState:UIControlStateSelected];
+}
+
+// 添加子控制器
+- (void) setupChildViewControllers
+{
+    [self setupOneChildViewController:[[UITableViewController alloc] init] title:@"精华" normalImage:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
+    [self setupOneChildViewController:[[UIViewController alloc] init] title:@"新帖" normalImage:@"tabBar_new_icon" selectedImage:@"tabBar_new_click_icon"];
     
-    // 添加子控制器
-    [self setupOneChildViewController:[[UITableViewController alloc] init] title:@"精华" image:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
-    [self setupOneChildViewController:[[UITableViewController alloc] init] title:@"新帖" image:@"tabBar_new_icon" selectedImage:@"tabBar_new_click_icon"];
-    [self setupOneChildViewController:[[UITableViewController alloc] init] title:@"关注" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
-    [self setupOneChildViewController:[[UITableViewController alloc] init] title:@"我" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
+    [self setupOneChildViewController:[[UITableViewController alloc] init] title:@"关注" normalImage:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
+    [self setupOneChildViewController:[[UIViewController alloc] init] title:@"我" normalImage:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
+
 }
 
 /**
@@ -47,28 +66,32 @@
  @param normalImage 图标
  @param selectedImage 选中的图标
  */
-- (void)setupOneChildViewController:(UIViewController *)vc title:(NSString *)title image:(NSString *)normalImage selectedImage:(NSString *)selectedImage
+- (void)setupOneChildViewController:(UIViewController *)vc title:(NSString *)title normalImage:(NSString *)normalImage selectedImage:(NSString *)selectedImage
 {
-    vc.view.backgroundColor = [UIColor redColor];
+    vc.view.backgroundColor = BYRandomColor;
     vc.tabBarItem.title = title;
-    vc.tabBarItem.image = [UIImage imageNamed:normalImage];
-    vc.tabBarItem.selectedImage = [[UIImage imageNamed:selectedImage] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    if (normalImage.length)
+    {
+        vc.tabBarItem.image = [UIImage imageNamed:normalImage];
+        // 设置无渲染效果的图片
+        vc.tabBarItem.selectedImage = [[UIImage imageNamed:selectedImage] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    }
     [self addChildViewController:vc];
 }
+
+/**
+ *  更换TabBar
+ */
+- (void)setupTabBar
+{
+    [self setValue:[[BYTabBar alloc] init] forKey:@"tabBar"];
+}
+
+//#pragma mark - Life Cycle
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
