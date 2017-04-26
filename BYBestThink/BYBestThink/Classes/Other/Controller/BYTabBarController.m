@@ -8,6 +8,11 @@
 
 #import "BYTabBarController.h"
 #import "BYTabBar.h"
+#import "BYEssenceViewController.h"
+#import "BYNewViewController.h"
+#import "BYFollowViewController.h"
+#import "BYMeViewController.h"
+#import "BYNavigationController.h"
 
 @interface BYTabBarController ()
 
@@ -50,11 +55,11 @@
 // 添加子控制器
 - (void) setupChildViewControllers
 {
-    [self setupOneChildViewController:[[UITableViewController alloc] init] title:@"精华" normalImage:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
-    [self setupOneChildViewController:[[UIViewController alloc] init] title:@"新帖" normalImage:@"tabBar_new_icon" selectedImage:@"tabBar_new_click_icon"];
+    [self setupOneChildViewController:[[BYNavigationController alloc] initWithRootViewController:[[BYEssenceViewController alloc] init]] title:@"精华" normalImage:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
+    [self setupOneChildViewController:[[BYNavigationController alloc] initWithRootViewController:[[BYNewViewController alloc] init]] title:@"新帖" normalImage:@"tabBar_new_icon" selectedImage:@"tabBar_new_click_icon"];
     
-    [self setupOneChildViewController:[[UITableViewController alloc] init] title:@"关注" normalImage:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
-    [self setupOneChildViewController:[[UIViewController alloc] init] title:@"我" normalImage:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
+    [self setupOneChildViewController:[[BYNavigationController alloc] initWithRootViewController:[[BYFollowViewController alloc] init]] title:@"关注" normalImage:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
+    [self setupOneChildViewController:[[BYNavigationController alloc] initWithRootViewController:[[BYMeViewController alloc] init]] title:@"我" normalImage:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
 
 }
 
@@ -68,7 +73,7 @@
  */
 - (void)setupOneChildViewController:(UIViewController *)vc title:(NSString *)title normalImage:(NSString *)normalImage selectedImage:(NSString *)selectedImage
 {
-    vc.view.backgroundColor = BYRandomColor;
+//    vc.view.backgroundColor = BYRandomColor;
     vc.tabBarItem.title = title;
     if (normalImage.length)
     {
