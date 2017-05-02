@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4986FA6F1EB8279E0054DF6D /* UITextField+BYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986FA6E1EB8279E0054DF6D /* UITextField+BYExtension.m */; };
 		49C2D0521EAF12BD0092039A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49C2D0511EAF12BD0092039A /* Assets.xcassets */; };
 		49C2D0BE1EB03EAD0092039A /* BYEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C2D09B1EB03EAD0092039A /* BYEssenceViewController.m */; };
 		49C2D0BF1EB03EAD0092039A /* BYFollowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C2D0A11EB03EAD0092039A /* BYFollowViewController.m */; };
@@ -25,12 +26,15 @@
 		49C2D0DE1EB094940092039A /* BYLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C2D0DC1EB094940092039A /* BYLoginRegisterViewController.m */; };
 		49C2D0DF1EB094940092039A /* BYLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49C2D0DD1EB094940092039A /* BYLoginRegisterViewController.xib */; };
 		49C2D0E21EB0A6A70092039A /* BYQuickLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C2D0E11EB0A6A70092039A /* BYQuickLoginButton.m */; };
+		49C2D0E51EB1AECC0092039A /* BYLoginRegisterTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C2D0E41EB1AECC0092039A /* BYLoginRegisterTextField.m */; };
 		D40E269659FA02BAC5573BAD /* libPods-BYBestThink.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 678D6574E4183531125CC11D /* libPods-BYBestThink.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		49784C6F1EAE4E950023CCBE /* BYBestThink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BYBestThink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49784C831EAE4E950023CCBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4986FA6D1EB8279E0054DF6D /* UITextField+BYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+BYExtension.h"; sourceTree = "<group>"; };
+		4986FA6E1EB8279E0054DF6D /* UITextField+BYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+BYExtension.m"; sourceTree = "<group>"; };
 		49C2D0511EAF12BD0092039A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49C2D09A1EB03EAD0092039A /* BYEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYEssenceViewController.h; sourceTree = "<group>"; };
 		49C2D09B1EB03EAD0092039A /* BYEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYEssenceViewController.m; sourceTree = "<group>"; };
@@ -44,8 +48,8 @@
 		49C2D0B21EB03EAD0092039A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		49C2D0B41EB03EAD0092039A /* UIView+BYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BYExtension.h"; sourceTree = "<group>"; };
 		49C2D0B51EB03EAD0092039A /* UIView+BYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BYExtension.m"; sourceTree = "<group>"; };
-		49C2D0B71EB03EAD0092039A /* BYTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYTabBar.h; sourceTree = "<group>"; };
-		49C2D0B81EB03EAD0092039A /* BYTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYTabBar.m; sourceTree = "<group>"; };
+		49C2D0B71EB03EAD0092039A /* BYTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYTabBar.h; path = ../Controller/BYTabBar.h; sourceTree = "<group>"; };
+		49C2D0B81EB03EAD0092039A /* BYTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYTabBar.m; path = ../Controller/BYTabBar.m; sourceTree = "<group>"; };
 		49C2D0B91EB03EAD0092039A /* BYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYTabBarController.h; sourceTree = "<group>"; };
 		49C2D0BA1EB03EAD0092039A /* BYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYTabBarController.m; sourceTree = "<group>"; };
 		49C2D0BB1EB03EAD0092039A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -64,6 +68,8 @@
 		49C2D0DD1EB094940092039A /* BYLoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BYLoginRegisterViewController.xib; sourceTree = "<group>"; };
 		49C2D0E01EB0A6A70092039A /* BYQuickLoginButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYQuickLoginButton.h; sourceTree = "<group>"; };
 		49C2D0E11EB0A6A70092039A /* BYQuickLoginButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYQuickLoginButton.m; sourceTree = "<group>"; };
+		49C2D0E31EB1AECC0092039A /* BYLoginRegisterTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYLoginRegisterTextField.h; sourceTree = "<group>"; };
+		49C2D0E41EB1AECC0092039A /* BYLoginRegisterTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYLoginRegisterTextField.m; sourceTree = "<group>"; };
 		5A3BBC7BF35B6E8994951A6B /* Pods-BYBestThink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BYBestThink.release.xcconfig"; path = "Pods/Target Support Files/Pods-BYBestThink/Pods-BYBestThink.release.xcconfig"; sourceTree = "<group>"; };
 		678D6574E4183531125CC11D /* libPods-BYBestThink.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BYBestThink.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5C8632245AA4E3D827E8594 /* Pods-BYBestThink.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BYBestThink.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BYBestThink/Pods-BYBestThink.debug.xcconfig"; sourceTree = "<group>"; };
@@ -287,6 +293,8 @@
 				49C2D0B51EB03EAD0092039A /* UIView+BYExtension.m */,
 				49C2D0CA1EB04BE60092039A /* UIBarButtonItem+BYExtension.h */,
 				49C2D0CB1EB04BE60092039A /* UIBarButtonItem+BYExtension.m */,
+				4986FA6D1EB8279E0054DF6D /* UITextField+BYExtension.h */,
+				4986FA6E1EB8279E0054DF6D /* UITextField+BYExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -294,8 +302,6 @@
 		49C2D0B61EB03EAD0092039A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				49C2D0B71EB03EAD0092039A /* BYTabBar.h */,
-				49C2D0B81EB03EAD0092039A /* BYTabBar.m */,
 				49C2D0B91EB03EAD0092039A /* BYTabBarController.h */,
 				49C2D0BA1EB03EAD0092039A /* BYTabBarController.m */,
 				49C2D0D31EB05EE20092039A /* BYNavigationController.h */,
@@ -310,8 +316,12 @@
 		49C2D0BD1EB03EAD0092039A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				49C2D0B71EB03EAD0092039A /* BYTabBar.h */,
+				49C2D0B81EB03EAD0092039A /* BYTabBar.m */,
 				49C2D0E01EB0A6A70092039A /* BYQuickLoginButton.h */,
 				49C2D0E11EB0A6A70092039A /* BYQuickLoginButton.m */,
+				49C2D0E31EB1AECC0092039A /* BYLoginRegisterTextField.h */,
+				49C2D0E41EB1AECC0092039A /* BYLoginRegisterTextField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -464,6 +474,7 @@
 				49C2D0C11EB03EAD0092039A /* BYNewViewController.m in Sources */,
 				49C2D0D51EB05EE20092039A /* BYNavigationController.m in Sources */,
 				49C2D0D21EB056310092039A /* BYRecommendFollowViewController.m in Sources */,
+				49C2D0E51EB1AECC0092039A /* BYLoginRegisterTextField.m in Sources */,
 				49C2D0E21EB0A6A70092039A /* BYQuickLoginButton.m in Sources */,
 				49C2D0C21EB03EAD0092039A /* AppDelegate.m in Sources */,
 				49C2D0BF1EB03EAD0092039A /* BYFollowViewController.m in Sources */,
@@ -471,6 +482,7 @@
 				49C2D0C41EB03EAD0092039A /* BYTabBar.m in Sources */,
 				49C2D0C31EB03EAD0092039A /* UIView+BYExtension.m in Sources */,
 				49C2D0DE1EB094940092039A /* BYLoginRegisterViewController.m in Sources */,
+				4986FA6F1EB8279E0054DF6D /* UITextField+BYExtension.m in Sources */,
 				49C2D0C01EB03EAD0092039A /* BYMeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

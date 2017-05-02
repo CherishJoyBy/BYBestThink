@@ -21,9 +21,8 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="login_register_background" translatesAutoresizingMaskIntoConstraints="NO" id="HVT-9F-PNB" userLabel="背景图片">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_register_background" translatesAutoresizingMaskIntoConstraints="NO" id="HVT-9F-PNB" userLabel="背景图片">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IXe-rI-PJS" userLabel="快速登录部分">
                     <rect key="frame" x="0.0" y="361" width="320" height="160"/>
@@ -140,13 +139,13 @@
                                 <constraint firstAttribute="height" constant="92" id="vNn-CA-s2F"/>
                             </constraints>
                         </imageView>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="手机号" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="NRl-mz-Swq">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="手机号" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="NRl-mz-Swq" customClass="BYLoginRegisterTextField">
                             <rect key="frame" x="37" y="0.0" width="246" height="46"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                         </textField>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="密码" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="4EI-HJ-M5v">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="密码" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="4EI-HJ-M5v" customClass="BYLoginRegisterTextField">
                             <rect key="frame" x="37" y="46" width="246" height="46"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -205,13 +204,13 @@
                                 <constraint firstAttribute="height" constant="92" id="lvl-Ag-bTv"/>
                             </constraints>
                         </imageView>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入手机号" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="mYv-az-BdT">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入手机号" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="mYv-az-BdT" customClass="BYLoginRegisterTextField">
                             <rect key="frame" x="37" y="0.0" width="246" height="46"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                         </textField>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="设置密码" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="INQ-pz-blv">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="设置密码" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="INQ-pz-blv" customClass="BYLoginRegisterTextField">
                             <rect key="frame" x="37" y="46" width="246" height="46"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -258,8 +257,10 @@
                 <constraint firstAttribute="trailing" secondItem="uH8-vD-GUp" secondAttribute="trailing" id="534-Te-cmH"/>
                 <constraint firstItem="37R-F6-DtB" firstAttribute="top" secondItem="BUs-Ys-pw4" secondAttribute="top" id="5k4-hv-jKk"/>
                 <constraint firstItem="BUs-Ys-pw4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6Wk-RI-qFu"/>
+                <constraint firstAttribute="trailing" secondItem="HVT-9F-PNB" secondAttribute="trailing" id="6tI-bG-I8A"/>
                 <constraint firstItem="37R-F6-DtB" firstAttribute="width" secondItem="BUs-Ys-pw4" secondAttribute="width" id="9mh-5v-wpR"/>
                 <constraint firstAttribute="trailing" secondItem="IXe-rI-PJS" secondAttribute="trailing" id="Mpp-fd-8F8"/>
+                <constraint firstAttribute="bottom" secondItem="HVT-9F-PNB" secondAttribute="bottom" id="Y0L-gj-zeg"/>
                 <constraint firstItem="uH8-vD-GUp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bGI-PB-q0h"/>
                 <constraint firstAttribute="bottom" secondItem="IXe-rI-PJS" secondAttribute="bottom" constant="47" id="bZN-4w-bjQ"/>
                 <constraint firstItem="IXe-rI-PJS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hTO-ZU-Aef"/>
@@ -267,6 +268,8 @@
                 <constraint firstItem="BUs-Ys-pw4" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="jT8-kE-mNh"/>
                 <constraint firstItem="37R-F6-DtB" firstAttribute="leading" secondItem="BUs-Ys-pw4" secondAttribute="trailing" id="pYF-5B-Rwf"/>
                 <constraint firstItem="BUs-Ys-pw4" firstAttribute="top" secondItem="uH8-vD-GUp" secondAttribute="bottom" constant="30" id="qBy-9J-F2L"/>
+                <constraint firstItem="HVT-9F-PNB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="sYZ-ES-Ucy"/>
+                <constraint firstItem="HVT-9F-PNB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="vK4-gB-STu"/>
             </constraints>
             <point key="canvasLocation" x="-56" y="-105"/>
         </view>
