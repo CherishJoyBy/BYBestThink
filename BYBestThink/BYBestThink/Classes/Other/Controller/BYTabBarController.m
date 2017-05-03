@@ -92,8 +92,6 @@
     [self setValue:[[BYTabBar alloc] init] forKey:@"tabBar"];
 }
 
-//#pragma mark - Life Cycle
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

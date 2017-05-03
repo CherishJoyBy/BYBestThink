@@ -8,6 +8,8 @@
 
 #import "BYMeViewController.h"
 #import "BYSettingViewController.h"
+#import "BYMeCell.h"
+#import "BYMeFooterView.h"
 
 @interface BYMeViewController ()
 
@@ -15,11 +17,33 @@
 
 @implementation BYMeViewController
 
+- (instancetype)init
+{
+    return [self initWithStyle:UITableViewStyleGrouped];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = BYCommonBgColor;
+    [self setupTable];
     
+    [self setupNav];
+    
+}
+
+- (void)setupTable
+{
+    self.tableView.backgroundColor = BYCommonBgColor;
+    self.tableView.sectionHeaderHeight = 0;
+    self.tableView.sectionFooterHeight = BYMargin;
+    self.tableView.contentInset = UIEdgeInsetsMake(BYMargin - 35, 0, 0, 0);
+    
+    // 设置footer
+    self.tableView.tableFooterView = [[BYMeFooterView alloc] init];
+}
+
+- (void)setupNav
+{
     // 标题
     self.navigationItem.title = @"我的";
     // 右边-设置
@@ -41,6 +65,41 @@
 {
     BYLogFunc
 }
+
+#pragma mark - UITableViewDelegate
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 2;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *ID = @"me";
+    
+    BYMeCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+
+    if (!cell) {
+        cell = [[BYMeCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
+    }
+    
+    if (indexPath.section == 0) {
+        cell.textLabel.text = @"登录/注册";
+        cell.imageView.image = [UIImage imageNamed:@"publish-audio"];
+    } else {
+        cell.textLabel.text = @"离线下载";
+        // 防止重用其他cell设置的imageView.image,
+        cell.imageView.image = nil;
+    }
+    
+    return cell;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

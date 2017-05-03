@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		4986FA6F1EB8279E0054DF6D /* UITextField+BYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986FA6E1EB8279E0054DF6D /* UITextField+BYExtension.m */; };
+		4986FA721EB858EC0054DF6D /* BYMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986FA711EB858EC0054DF6D /* BYMeCell.m */; };
+		4986FA7B1EB85C480054DF6D /* BYConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986FA7A1EB85C480054DF6D /* BYConst.m */; };
+		4986FA7E1EB85CCF0054DF6D /* BYMeSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986FA7D1EB85CCF0054DF6D /* BYMeSquare.m */; };
+		4986FA811EB85D280054DF6D /* BYMeFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986FA801EB85D280054DF6D /* BYMeFooterView.m */; };
+		4986FA841EB886560054DF6D /* BYMeSquareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986FA831EB886560054DF6D /* BYMeSquareButton.m */; };
 		49C2D0521EAF12BD0092039A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49C2D0511EAF12BD0092039A /* Assets.xcassets */; };
 		49C2D0BE1EB03EAD0092039A /* BYEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C2D09B1EB03EAD0092039A /* BYEssenceViewController.m */; };
 		49C2D0BF1EB03EAD0092039A /* BYFollowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C2D0A11EB03EAD0092039A /* BYFollowViewController.m */; };
@@ -35,6 +40,16 @@
 		49784C831EAE4E950023CCBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4986FA6D1EB8279E0054DF6D /* UITextField+BYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+BYExtension.h"; sourceTree = "<group>"; };
 		4986FA6E1EB8279E0054DF6D /* UITextField+BYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+BYExtension.m"; sourceTree = "<group>"; };
+		4986FA701EB858EC0054DF6D /* BYMeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYMeCell.h; sourceTree = "<group>"; };
+		4986FA711EB858EC0054DF6D /* BYMeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYMeCell.m; sourceTree = "<group>"; };
+		4986FA791EB85C480054DF6D /* BYConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYConst.h; path = Other/BYConst.h; sourceTree = "<group>"; };
+		4986FA7A1EB85C480054DF6D /* BYConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYConst.m; path = Other/BYConst.m; sourceTree = "<group>"; };
+		4986FA7C1EB85CCF0054DF6D /* BYMeSquare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYMeSquare.h; sourceTree = "<group>"; };
+		4986FA7D1EB85CCF0054DF6D /* BYMeSquare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYMeSquare.m; sourceTree = "<group>"; };
+		4986FA7F1EB85D280054DF6D /* BYMeFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYMeFooterView.h; sourceTree = "<group>"; };
+		4986FA801EB85D280054DF6D /* BYMeFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYMeFooterView.m; sourceTree = "<group>"; };
+		4986FA821EB886560054DF6D /* BYMeSquareButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYMeSquareButton.h; sourceTree = "<group>"; };
+		4986FA831EB886560054DF6D /* BYMeSquareButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYMeSquareButton.m; sourceTree = "<group>"; };
 		49C2D0511EAF12BD0092039A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49C2D09A1EB03EAD0092039A /* BYEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYEssenceViewController.h; sourceTree = "<group>"; };
 		49C2D09B1EB03EAD0092039A /* BYEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYEssenceViewController.m; sourceTree = "<group>"; };
@@ -44,16 +59,16 @@
 		49C2D0A71EB03EAD0092039A /* BYMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYMeViewController.m; sourceTree = "<group>"; };
 		49C2D0AC1EB03EAD0092039A /* BYNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYNewViewController.h; sourceTree = "<group>"; };
 		49C2D0AD1EB03EAD0092039A /* BYNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYNewViewController.m; sourceTree = "<group>"; };
-		49C2D0B11EB03EAD0092039A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		49C2D0B21EB03EAD0092039A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		49C2D0B11EB03EAD0092039A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Other/AppDelegate.h; sourceTree = "<group>"; };
+		49C2D0B21EB03EAD0092039A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Other/AppDelegate.m; sourceTree = "<group>"; };
 		49C2D0B41EB03EAD0092039A /* UIView+BYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BYExtension.h"; sourceTree = "<group>"; };
 		49C2D0B51EB03EAD0092039A /* UIView+BYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BYExtension.m"; sourceTree = "<group>"; };
 		49C2D0B71EB03EAD0092039A /* BYTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYTabBar.h; path = ../Controller/BYTabBar.h; sourceTree = "<group>"; };
 		49C2D0B81EB03EAD0092039A /* BYTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYTabBar.m; path = ../Controller/BYTabBar.m; sourceTree = "<group>"; };
 		49C2D0B91EB03EAD0092039A /* BYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYTabBarController.h; sourceTree = "<group>"; };
 		49C2D0BA1EB03EAD0092039A /* BYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYTabBarController.m; sourceTree = "<group>"; };
-		49C2D0BB1EB03EAD0092039A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		49C2D0BC1EB03EAD0092039A /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		49C2D0BB1EB03EAD0092039A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Other/main.m; sourceTree = "<group>"; };
+		49C2D0BC1EB03EAD0092039A /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = Other/PrefixHeader.pch; sourceTree = "<group>"; };
 		49C2D0CA1EB04BE60092039A /* UIBarButtonItem+BYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+BYExtension.h"; sourceTree = "<group>"; };
 		49C2D0CB1EB04BE60092039A /* UIBarButtonItem+BYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+BYExtension.m"; sourceTree = "<group>"; };
 		49C2D0D01EB056310092039A /* BYRecommendFollowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYRecommendFollowViewController.h; sourceTree = "<group>"; };
@@ -131,6 +146,12 @@
 				49C2D09E1EB03EAD0092039A /* Follow */,
 				49C2D0A41EB03EAD0092039A /* Me */,
 				49C2D0B01EB03EAD0092039A /* Other */,
+				49C2D0B11EB03EAD0092039A /* AppDelegate.h */,
+				49C2D0B21EB03EAD0092039A /* AppDelegate.m */,
+				49C2D0BB1EB03EAD0092039A /* main.m */,
+				49C2D0BC1EB03EAD0092039A /* PrefixHeader.pch */,
+				4986FA791EB85C480054DF6D /* BYConst.h */,
+				4986FA7A1EB85C480054DF6D /* BYConst.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -228,6 +249,8 @@
 		49C2D0A81EB03EAD0092039A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4986FA7C1EB85CCF0054DF6D /* BYMeSquare.h */,
+				4986FA7D1EB85CCF0054DF6D /* BYMeSquare.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -235,6 +258,12 @@
 		49C2D0A91EB03EAD0092039A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4986FA701EB858EC0054DF6D /* BYMeCell.h */,
+				4986FA711EB858EC0054DF6D /* BYMeCell.m */,
+				4986FA7F1EB85D280054DF6D /* BYMeFooterView.h */,
+				4986FA801EB85D280054DF6D /* BYMeFooterView.m */,
+				4986FA821EB886560054DF6D /* BYMeSquareButton.h */,
+				4986FA831EB886560054DF6D /* BYMeSquareButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -275,12 +304,8 @@
 		49C2D0B01EB03EAD0092039A /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				49C2D0B11EB03EAD0092039A /* AppDelegate.h */,
-				49C2D0B21EB03EAD0092039A /* AppDelegate.m */,
 				49C2D0B31EB03EAD0092039A /* Category */,
 				49C2D0B61EB03EAD0092039A /* Controller */,
-				49C2D0BB1EB03EAD0092039A /* main.m */,
-				49C2D0BC1EB03EAD0092039A /* PrefixHeader.pch */,
 				49C2D0BD1EB03EAD0092039A /* View */,
 			);
 			path = Other;
@@ -467,7 +492,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4986FA7B1EB85C480054DF6D /* BYConst.m in Sources */,
+				4986FA721EB858EC0054DF6D /* BYMeCell.m in Sources */,
 				49C2D0D81EB069930092039A /* BYSettingViewController.m in Sources */,
+				4986FA841EB886560054DF6D /* BYMeSquareButton.m in Sources */,
 				49C2D0C61EB03EAD0092039A /* main.m in Sources */,
 				49C2D0BE1EB03EAD0092039A /* BYEssenceViewController.m in Sources */,
 				49C2D0C51EB03EAD0092039A /* BYTabBarController.m in Sources */,
@@ -478,6 +506,8 @@
 				49C2D0E21EB0A6A70092039A /* BYQuickLoginButton.m in Sources */,
 				49C2D0C21EB03EAD0092039A /* AppDelegate.m in Sources */,
 				49C2D0BF1EB03EAD0092039A /* BYFollowViewController.m in Sources */,
+				4986FA811EB85D280054DF6D /* BYMeFooterView.m in Sources */,
+				4986FA7E1EB85CCF0054DF6D /* BYMeSquare.m in Sources */,
 				49C2D0CC1EB04BE60092039A /* UIBarButtonItem+BYExtension.m in Sources */,
 				49C2D0C41EB03EAD0092039A /* BYTabBar.m in Sources */,
 				49C2D0C31EB03EAD0092039A /* UIView+BYExtension.m in Sources */,

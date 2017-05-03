@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BYMeViewController : UIViewController
+@interface BYMeViewController : UITableViewController
 
 @end

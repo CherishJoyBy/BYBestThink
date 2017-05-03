@@ -58,12 +58,14 @@
 {
     [self popViewControllerAnimated:YES];
 }
+
+#pragma mark - UIGestureRecognizerDelegate
+
 /**
  *  手势识别器对象会调用这个代理方法来决定手势是否有效
  *
  *  @return YES : 手势有效, NO : 手势无效
  */
-#pragma mark - UIGestureRecognizerDelegate
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
 {
     // 手势何时有效 : 当导航控制器的子控制器个数 > 1就有效
