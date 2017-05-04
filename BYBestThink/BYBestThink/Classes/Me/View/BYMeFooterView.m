@@ -11,6 +11,7 @@
 #import <AFNetworking.h>
 #import <MJExtension.h>
 #import "BYMeSquareButton.h"
+#import "BYWebViewController.h"
 
 @implementation BYMeFooterView
 
@@ -46,7 +47,8 @@
     NSUInteger count = squares.count;
     
     // 方块的尺寸
-    int maxColsCount = 4; // 一行的最大列数
+    // 列数
+    int maxColsCount = 4;
     CGFloat buttonW = self.by_width / maxColsCount;
     CGFloat buttonH = buttonW;
     
@@ -83,10 +85,15 @@
     
     if ([url hasPrefix:@"http"])
     {
-        // 利用webView加载url即可
-//        UITabBarController *tabBarVc = (UITabBarController *)self.window.rootViewController;
-//        UINavigationController *nav = tabBarVc.selectedViewController;
+        // 获得"我"模块对应的导航控制器
+        UITabBarController *tabBarVc = (UITabBarController *)self.window.rootViewController;
+        UINavigationController *nav = tabBarVc.selectedViewController;
         
+        // 显示XMGWebViewController
+        BYWebViewController *webView = [[BYWebViewController alloc] init];
+        webView.url = url;
+        webView.navigationItem.title = button.currentTitle;
+        [nav pushViewController:webView animated:YES];
     }
     else if ([url hasPrefix:@"mod"])
     {

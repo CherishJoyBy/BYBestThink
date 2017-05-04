@@ -13,6 +13,8 @@
 		4986FA7E1EB85CCF0054DF6D /* BYMeSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986FA7D1EB85CCF0054DF6D /* BYMeSquare.m */; };
 		4986FA811EB85D280054DF6D /* BYMeFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986FA801EB85D280054DF6D /* BYMeFooterView.m */; };
 		4986FA841EB886560054DF6D /* BYMeSquareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986FA831EB886560054DF6D /* BYMeSquareButton.m */; };
+		4986FA881EB9C4800054DF6D /* BYWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986FA861EB9C4800054DF6D /* BYWebViewController.m */; };
+		4986FA891EB9C4800054DF6D /* BYWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4986FA871EB9C4800054DF6D /* BYWebViewController.xib */; };
 		49C2D0521EAF12BD0092039A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49C2D0511EAF12BD0092039A /* Assets.xcassets */; };
 		49C2D0BE1EB03EAD0092039A /* BYEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C2D09B1EB03EAD0092039A /* BYEssenceViewController.m */; };
 		49C2D0BF1EB03EAD0092039A /* BYFollowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C2D0A11EB03EAD0092039A /* BYFollowViewController.m */; };
@@ -50,6 +52,9 @@
 		4986FA801EB85D280054DF6D /* BYMeFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYMeFooterView.m; sourceTree = "<group>"; };
 		4986FA821EB886560054DF6D /* BYMeSquareButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYMeSquareButton.h; sourceTree = "<group>"; };
 		4986FA831EB886560054DF6D /* BYMeSquareButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYMeSquareButton.m; sourceTree = "<group>"; };
+		4986FA851EB9C4800054DF6D /* BYWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYWebViewController.h; sourceTree = "<group>"; };
+		4986FA861EB9C4800054DF6D /* BYWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYWebViewController.m; sourceTree = "<group>"; };
+		4986FA871EB9C4800054DF6D /* BYWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BYWebViewController.xib; sourceTree = "<group>"; };
 		49C2D0511EAF12BD0092039A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49C2D09A1EB03EAD0092039A /* BYEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYEssenceViewController.h; sourceTree = "<group>"; };
 		49C2D09B1EB03EAD0092039A /* BYEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYEssenceViewController.m; sourceTree = "<group>"; };
@@ -242,6 +247,9 @@
 				49C2D0A71EB03EAD0092039A /* BYMeViewController.m */,
 				49C2D0D61EB069930092039A /* BYSettingViewController.h */,
 				49C2D0D71EB069930092039A /* BYSettingViewController.m */,
+				4986FA851EB9C4800054DF6D /* BYWebViewController.h */,
+				4986FA861EB9C4800054DF6D /* BYWebViewController.m */,
+				4986FA871EB9C4800054DF6D /* BYWebViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -431,6 +439,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4986FA891EB9C4800054DF6D /* BYWebViewController.xib in Resources */,
 				49C2D0DA1EB089980092039A /* BYFollowViewController.xib in Resources */,
 				49C2D0521EAF12BD0092039A /* Assets.xcassets in Resources */,
 				49C2D0DF1EB094940092039A /* BYLoginRegisterViewController.xib in Resources */,
@@ -514,6 +523,7 @@
 				49C2D0DE1EB094940092039A /* BYLoginRegisterViewController.m in Sources */,
 				4986FA6F1EB8279E0054DF6D /* UITextField+BYExtension.m in Sources */,
 				49C2D0C01EB03EAD0092039A /* BYMeViewController.m in Sources */,
+				4986FA881EB9C4800054DF6D /* BYWebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
