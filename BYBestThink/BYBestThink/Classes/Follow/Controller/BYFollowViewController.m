@@ -9,6 +9,7 @@
 #import "BYFollowViewController.h"
 #import "BYRecommendFollowViewController.h"
 #import "BYLoginRegisterViewController.h"
+#import "BYNavigationController.h"
 
 @interface BYFollowViewController ()
 
@@ -29,7 +30,8 @@
 - (IBAction)loginRegister
 {
     BYLoginRegisterViewController *loginRegister = [[BYLoginRegisterViewController alloc] init];
-    [self presentViewController:loginRegister animated:YES completion:nil];
+    BYNavigationController *loginRegisterNav = [[BYNavigationController alloc] initWithRootViewController:loginRegister];
+    [self presentViewController:loginRegisterNav animated:YES completion:nil];
 }
 
 - (void)followClick

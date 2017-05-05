@@ -33,7 +33,13 @@
 #define BYColor(r, g, b) BYColorA((r), (g), (b), 255)
 #define BYRandomColor BYColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
 #define BYGrayColor(v) BYColor((v), (v), (v))
-#define BYCommonBgColor BYGrayColor(206)
+#define BYCommonBgColor BYGrayColor(240)
+
+// SMSSDK
+// appkey
+#define SMSAppKey @"1d90038c3b33c"
+// appSecret
+#define SMSAppSecret @"bfa205ba34e24b0e929ce405410849ea"
 
 #endif
 

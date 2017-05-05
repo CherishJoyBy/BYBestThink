@@ -10,6 +10,8 @@
 #import "BYSettingViewController.h"
 #import "BYMeCell.h"
 #import "BYMeFooterView.h"
+#import "BYLoginRegisterViewController.h"
+#import "BYNavigationController.h"
 
 @interface BYMeViewController ()
 
@@ -100,6 +102,18 @@
     return cell;
 }
 
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 0)
+    {
+        BYLoginRegisterViewController *loginRegister = [[BYLoginRegisterViewController alloc] init];
+        BYNavigationController *loginRegisterNav = [[BYNavigationController alloc] initWithRootViewController:loginRegister];
+        [self presentViewController:loginRegisterNav animated:YES completion:nil];
+    }
+
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

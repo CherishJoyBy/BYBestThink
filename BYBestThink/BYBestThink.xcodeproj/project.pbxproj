@@ -15,6 +15,18 @@
 		4986FA841EB886560054DF6D /* BYMeSquareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986FA831EB886560054DF6D /* BYMeSquareButton.m */; };
 		4986FA881EB9C4800054DF6D /* BYWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986FA861EB9C4800054DF6D /* BYWebViewController.m */; };
 		4986FA891EB9C4800054DF6D /* BYWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4986FA871EB9C4800054DF6D /* BYWebViewController.xib */; };
+		4997FEB91EBB2327004EABEC /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4997FEB61EBB2327004EABEC /* MOBFoundation.framework */; };
+		4997FEBA1EBB2327004EABEC /* MOBFoundationEx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4997FEB71EBB2327004EABEC /* MOBFoundationEx.framework */; };
+		4997FEBB1EBB2327004EABEC /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4997FEB81EBB2327004EABEC /* SMS_SDK.framework */; };
+		4997FEBD1EBB2399004EABEC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4997FEBC1EBB2399004EABEC /* SystemConfiguration.framework */; };
+		4997FEBF1EBB23A0004EABEC /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4997FEBE1EBB23A0004EABEC /* CoreTelephony.framework */; };
+		4997FEC11EBB23A9004EABEC /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4997FEC01EBB23A9004EABEC /* AdSupport.framework */; };
+		4997FEC31EBB23BC004EABEC /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4997FEC21EBB23BC004EABEC /* libz.tbd */; };
+		4997FEC51EBB23C9004EABEC /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4997FEC41EBB23C9004EABEC /* libicucore.tbd */; };
+		4997FEC71EBB23D2004EABEC /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4997FEC61EBB23D2004EABEC /* MessageUI.framework */; };
+		4997FEC91EBB23DB004EABEC /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4997FEC81EBB23DB004EABEC /* JavaScriptCore.framework */; };
+		4997FECB1EBB23E5004EABEC /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4997FECA1EBB23E5004EABEC /* libstdc++.tbd */; };
+		4997FECE1EBB287E004EABEC /* BYForgetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4997FECD1EBB287E004EABEC /* BYForgetPasswordViewController.m */; };
 		49C2D0521EAF12BD0092039A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49C2D0511EAF12BD0092039A /* Assets.xcassets */; };
 		49C2D0BE1EB03EAD0092039A /* BYEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C2D09B1EB03EAD0092039A /* BYEssenceViewController.m */; };
 		49C2D0BF1EB03EAD0092039A /* BYFollowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C2D0A11EB03EAD0092039A /* BYFollowViewController.m */; };
@@ -55,6 +67,19 @@
 		4986FA851EB9C4800054DF6D /* BYWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYWebViewController.h; sourceTree = "<group>"; };
 		4986FA861EB9C4800054DF6D /* BYWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYWebViewController.m; sourceTree = "<group>"; };
 		4986FA871EB9C4800054DF6D /* BYWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BYWebViewController.xib; sourceTree = "<group>"; };
+		4997FEB61EBB2327004EABEC /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
+		4997FEB71EBB2327004EABEC /* MOBFoundationEx.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundationEx.framework; sourceTree = "<group>"; };
+		4997FEB81EBB2327004EABEC /* SMS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMS_SDK.framework; sourceTree = "<group>"; };
+		4997FEBC1EBB2399004EABEC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		4997FEBE1EBB23A0004EABEC /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		4997FEC01EBB23A9004EABEC /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		4997FEC21EBB23BC004EABEC /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		4997FEC41EBB23C9004EABEC /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		4997FEC61EBB23D2004EABEC /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		4997FEC81EBB23DB004EABEC /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		4997FECA1EBB23E5004EABEC /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		4997FECC1EBB287E004EABEC /* BYForgetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYForgetPasswordViewController.h; sourceTree = "<group>"; };
+		4997FECD1EBB287E004EABEC /* BYForgetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYForgetPasswordViewController.m; sourceTree = "<group>"; };
 		49C2D0511EAF12BD0092039A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49C2D09A1EB03EAD0092039A /* BYEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYEssenceViewController.h; sourceTree = "<group>"; };
 		49C2D09B1EB03EAD0092039A /* BYEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYEssenceViewController.m; sourceTree = "<group>"; };
@@ -100,7 +125,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4997FECB1EBB23E5004EABEC /* libstdc++.tbd in Frameworks */,
+				4997FEC91EBB23DB004EABEC /* JavaScriptCore.framework in Frameworks */,
+				4997FEC71EBB23D2004EABEC /* MessageUI.framework in Frameworks */,
+				4997FEC51EBB23C9004EABEC /* libicucore.tbd in Frameworks */,
+				4997FEC31EBB23BC004EABEC /* libz.tbd in Frameworks */,
+				4997FEC11EBB23A9004EABEC /* AdSupport.framework in Frameworks */,
+				4997FEBF1EBB23A0004EABEC /* CoreTelephony.framework in Frameworks */,
+				4997FEBD1EBB2399004EABEC /* SystemConfiguration.framework in Frameworks */,
+				4997FEB91EBB2327004EABEC /* MOBFoundation.framework in Frameworks */,
+				4997FEBB1EBB2327004EABEC /* SMS_SDK.framework in Frameworks */,
 				D40E269659FA02BAC5573BAD /* libPods-BYBestThink.a in Frameworks */,
+				4997FEBA1EBB2327004EABEC /* MOBFoundationEx.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,9 +179,28 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4997FEB41EBB2327004EABEC /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				4997FEB51EBB2327004EABEC /* SMS_SDK */,
+			);
+			path = SDK;
+			sourceTree = "<group>";
+		};
+		4997FEB51EBB2327004EABEC /* SMS_SDK */ = {
+			isa = PBXGroup;
+			children = (
+				4997FEB61EBB2327004EABEC /* MOBFoundation.framework */,
+				4997FEB71EBB2327004EABEC /* MOBFoundationEx.framework */,
+				4997FEB81EBB2327004EABEC /* SMS_SDK.framework */,
+			);
+			path = SMS_SDK;
+			sourceTree = "<group>";
+		};
 		49C2D0971EB03EAD0092039A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				4997FEB41EBB2327004EABEC /* SDK */,
 				49C2D0981EB03EAD0092039A /* Essence */,
 				49C2D0AA1EB03EAD0092039A /* New */,
 				49C2D09E1EB03EAD0092039A /* Follow */,
@@ -342,6 +397,8 @@
 				49C2D0DB1EB094940092039A /* BYLoginRegisterViewController.h */,
 				49C2D0DC1EB094940092039A /* BYLoginRegisterViewController.m */,
 				49C2D0DD1EB094940092039A /* BYLoginRegisterViewController.xib */,
+				4997FECC1EBB287E004EABEC /* BYForgetPasswordViewController.h */,
+				4997FECD1EBB287E004EABEC /* BYForgetPasswordViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -371,6 +428,14 @@
 		D9CF1E1032C8216023F21978 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4997FECA1EBB23E5004EABEC /* libstdc++.tbd */,
+				4997FEC81EBB23DB004EABEC /* JavaScriptCore.framework */,
+				4997FEC61EBB23D2004EABEC /* MessageUI.framework */,
+				4997FEC41EBB23C9004EABEC /* libicucore.tbd */,
+				4997FEC21EBB23BC004EABEC /* libz.tbd */,
+				4997FEC01EBB23A9004EABEC /* AdSupport.framework */,
+				4997FEBE1EBB23A0004EABEC /* CoreTelephony.framework */,
+				4997FEBC1EBB2399004EABEC /* SystemConfiguration.framework */,
 				678D6574E4183531125CC11D /* libPods-BYBestThink.a */,
 			);
 			name = Frameworks;
@@ -507,6 +572,7 @@
 				4986FA841EB886560054DF6D /* BYMeSquareButton.m in Sources */,
 				49C2D0C61EB03EAD0092039A /* main.m in Sources */,
 				49C2D0BE1EB03EAD0092039A /* BYEssenceViewController.m in Sources */,
+				4997FECE1EBB287E004EABEC /* BYForgetPasswordViewController.m in Sources */,
 				49C2D0C51EB03EAD0092039A /* BYTabBarController.m in Sources */,
 				49C2D0C11EB03EAD0092039A /* BYNewViewController.m in Sources */,
 				49C2D0D51EB05EE20092039A /* BYNavigationController.m in Sources */,
@@ -627,6 +693,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 7FC3MV4TNP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BYBestThink/Classes/SDK/SMS_SDK",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = BYBestThink/Classes/Other/PrefixHeader.pch;
 				INFOPLIST_FILE = BYBestThink/Info.plist;
@@ -644,6 +714,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 7FC3MV4TNP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BYBestThink/Classes/SDK/SMS_SDK",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = BYBestThink/Classes/Other/PrefixHeader.pch;
 				INFOPLIST_FILE = BYBestThink/Info.plist;
