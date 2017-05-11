@@ -7,10 +7,14 @@
 //
 
 #import "BYSettingViewController.h"
+#import "BYClearCacheCell.h"
+#import <SDImageCache.h>
 
 @interface BYSettingViewController ()
 
 @end
+
+static NSString * const BYClearCacheCellIdentifier = @"BYClearCacheCellIdentifier";
 
 @implementation BYSettingViewController
 
@@ -23,8 +27,9 @@
     
     [super viewDidLoad];
     
-    self.view.backgroundColor = BYCommonBgColor;
+    self.view.backgroundColor = BYCommonBgColor; 
     self.navigationItem.title = @"设置";
+    [self.tableView registerClass:[BYClearCacheCell class] forCellReuseIdentifier:BYClearCacheCellIdentifier];
 }
 
 #pragma mark - UITableViewDataSource
@@ -48,13 +53,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *ID = @"settingCell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
-    }
+    BYClearCacheCell *cell = [tableView dequeueReusableCellWithIdentifier:BYClearCacheCellIdentifier];
     
     if (indexPath.section == 0)
     {
@@ -62,29 +61,61 @@
     }
     else
     {
-        NSInteger currentRow = indexPath.row;
-        if (currentRow == 0)
+        if (indexPath.row == 0)
         {
-            NSString *documentStr = [NSString stringWithFormat:@"%dKB",107];
-            cell.textLabel.text = [NSString stringWithFormat:@"清除缓存(已使用%@)",documentStr];
+            // 显示加载状态
+            UIActivityIndicatorView *loadingView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+            [loadingView startAnimating];
+            cell.accessoryView = loadingView;
+            
+            // 在子线程中处理耗时操作
+            dispatch_async(dispatch_get_global_queue(0, 0), ^{
+                unsigned long long size = [SDImageCache sharedImageCache].getSize;
+                
+                NSUInteger numMB = 0;
+                NSUInteger numKB = 0;
+                NSUInteger numB = 0;
+                NSString *cacheSize;
+                
+                if (size >= 1024 * 1024)
+                {
+                    numMB = size / (1024 * 1024);
+                    cacheSize = [NSString stringWithFormat:@"%luMB",numMB];
+                }
+                else if (size >= 1024)
+                {
+                    numKB = size / 1024;
+                    cacheSize = [NSString stringWithFormat:@"%luKB",numKB];
+                }
+                else
+                {
+                    cacheSize = [NSString stringWithFormat:@"%luB",numB];
+                }
+                NSString *cacheText = [NSString stringWithFormat:@"清除缓存(已使用%@)",cacheSize];
+                // 在主线程中赋值
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    cell.textLabel.text = cacheText;
+                    cell.accessoryView = nil;
+                });
+            });
         }
-        else if (currentRow == 1)
+        else if (indexPath.row == 1)
         {
             cell.textLabel.text = @"推荐给朋友";
         }
-        else if (currentRow == 2)
+        else if (indexPath.row == 2)
         {
             cell.textLabel.text = @"帮助";
         }
-        else if (currentRow == 3)
+        else if (indexPath.row == 3)
         {
             cell.textLabel.text = @"当前版本: 4.5.6";
         }
-        else if (currentRow == 4)
+        else if (indexPath.row == 4)
         {
             cell.textLabel.text = @"关于我们";
         }
-        else if (currentRow == 5)
+        else if (indexPath.row == 5)
         {
             cell.textLabel.text = @"隐私政策";
         }
@@ -92,7 +123,7 @@
         {
             cell.textLabel.text = @"打分支持BYBestThink";
         }
-        if (currentRow != 4)
+        if (indexPath.row != 4)
         {
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         }
@@ -105,7 +136,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    if ( indexPath.section == 1 && indexPath.row == 0)
+    {
+        
+    }
 }
 
 - (void)didReceiveMemoryWarning {

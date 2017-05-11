@@ -18,7 +18,7 @@
 #import "UIBarButtonItem+BYExtension.h"
 #import "UITextField+BYExtension.h"
 #import "BYConst.h"
-
+#import "NSString+BYExtension.h"
 
 #ifdef DEBUG
 #define BYLog(...) NSLog(__VA_ARGS__)
