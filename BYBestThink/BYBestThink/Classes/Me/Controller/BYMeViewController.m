@@ -68,7 +68,7 @@
     BYLogFunc
 }
 
-#pragma mark - UITableViewDelegate
+#pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -90,10 +90,13 @@
         cell = [[BYMeCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
     }
     
-    if (indexPath.section == 0) {
+    if (indexPath.section == 0)
+    {
         cell.textLabel.text = @"登录/注册";
         cell.imageView.image = [UIImage imageNamed:@"publish-audio"];
-    } else {
+    }
+    else
+    {
         cell.textLabel.text = @"离线下载";
         // 防止重用其他cell设置的imageView.image,
         cell.imageView.image = nil;

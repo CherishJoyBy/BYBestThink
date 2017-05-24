@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		494C10981EC166400073DDB2 /* NSString+BYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 494C10971EC166400073DDB2 /* NSString+BYExtension.m */; };
-		494C109B1EC2E29C0073DDB2 /* BYClearCacheCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 494C109A1EC2E29C0073DDB2 /* BYClearCacheCell.m */; };
+		494CA1F61ED572CD00C101CD /* BYClearCacheCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 494CA1F51ED572CD00C101CD /* BYClearCacheCell.m */; };
 		4986FA6F1EB8279E0054DF6D /* UITextField+BYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986FA6E1EB8279E0054DF6D /* UITextField+BYExtension.m */; };
 		4986FA721EB858EC0054DF6D /* BYMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986FA711EB858EC0054DF6D /* BYMeCell.m */; };
 		4986FA7B1EB85C480054DF6D /* BYConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986FA7A1EB85C480054DF6D /* BYConst.m */; };
@@ -54,8 +54,8 @@
 /* Begin PBXFileReference section */
 		494C10961EC166400073DDB2 /* NSString+BYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+BYExtension.h"; sourceTree = "<group>"; };
 		494C10971EC166400073DDB2 /* NSString+BYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+BYExtension.m"; sourceTree = "<group>"; };
-		494C10991EC2E29C0073DDB2 /* BYClearCacheCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYClearCacheCell.h; sourceTree = "<group>"; };
-		494C109A1EC2E29C0073DDB2 /* BYClearCacheCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYClearCacheCell.m; sourceTree = "<group>"; };
+		494CA1F41ED572CD00C101CD /* BYClearCacheCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYClearCacheCell.h; sourceTree = "<group>"; };
+		494CA1F51ED572CD00C101CD /* BYClearCacheCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYClearCacheCell.m; sourceTree = "<group>"; };
 		49784C6F1EAE4E950023CCBE /* BYBestThink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BYBestThink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49784C831EAE4E950023CCBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4986FA6D1EB8279E0054DF6D /* UITextField+BYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+BYExtension.h"; sourceTree = "<group>"; };
@@ -329,12 +329,12 @@
 			children = (
 				4986FA701EB858EC0054DF6D /* BYMeCell.h */,
 				4986FA711EB858EC0054DF6D /* BYMeCell.m */,
+				494CA1F41ED572CD00C101CD /* BYClearCacheCell.h */,
+				494CA1F51ED572CD00C101CD /* BYClearCacheCell.m */,
 				4986FA7F1EB85D280054DF6D /* BYMeFooterView.h */,
 				4986FA801EB85D280054DF6D /* BYMeFooterView.m */,
 				4986FA821EB886560054DF6D /* BYMeSquareButton.h */,
 				4986FA831EB886560054DF6D /* BYMeSquareButton.m */,
-				494C10991EC2E29C0073DDB2 /* BYClearCacheCell.h */,
-				494C109A1EC2E29C0073DDB2 /* BYClearCacheCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -577,7 +577,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4986FA7B1EB85C480054DF6D /* BYConst.m in Sources */,
-				494C109B1EC2E29C0073DDB2 /* BYClearCacheCell.m in Sources */,
+				494CA1F61ED572CD00C101CD /* BYClearCacheCell.m in Sources */,
 				4986FA721EB858EC0054DF6D /* BYMeCell.m in Sources */,
 				49C2D0D81EB069930092039A /* BYSettingViewController.m in Sources */,
 				494C10981EC166400073DDB2 /* NSString+BYExtension.m in Sources */,

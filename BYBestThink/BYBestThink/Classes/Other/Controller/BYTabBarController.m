@@ -60,7 +60,6 @@
     [self setupOneChildViewController:[[BYNavigationController alloc] initWithRootViewController:[[BYNewViewController alloc] init]] title:@"新帖" normalImage:@"tabBar_new_icon" selectedImage:@"tabBar_new_click_icon"];
     
     [self setupOneChildViewController:[[BYNavigationController alloc] initWithRootViewController:[[BYFollowViewController alloc] init]] title:@"关注" normalImage:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
-
 }
 
 /**
