@@ -12,7 +12,7 @@
 
 #define BYCustomCacheFile [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).lastObject stringByAppendingPathComponent:@"Custom"]
 
-@interface BYClearCacheCell () <MBProgressHUDDelegate>
+@interface BYClearCacheCell ()
 
 @end
 
@@ -98,7 +98,7 @@
             // 所有的缓存都清除完毕
             dispatch_async(dispatch_get_main_queue(), ^{
                 // 隐藏指示器
-                [self showHudMessage:@"清除缓存成功" withImage:@"success" withDelayTime:0.5];
+                [self showHudMessage:@"清除缓存成功" withImage:@"success" withDelayTime:0.8];
                     // 设置文字
                     self.textLabel.text = @"清除缓存";
             });
@@ -106,6 +106,13 @@
     }];
 }
 
+/**
+ 弹出自定义提示视图,在延迟时间之后隐藏.
+
+ @param message 提示文本
+ @param image 提示图片
+ @param delayTime 延迟时间
+ */
 - (void)showHudMessage:(NSString *)message withImage:(NSString *)image withDelayTime:(float)delayTime
 {
     // 弹出指示器

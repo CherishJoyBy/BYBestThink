@@ -110,13 +110,8 @@ static NSString * const BYClearCacheCellId = @"BYClearCacheCell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    NSLog(@"%zd",indexPath.row);
     BYLogFunc
-}
-
-- (void)dealloc
-{
-    BYLogFunc
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end

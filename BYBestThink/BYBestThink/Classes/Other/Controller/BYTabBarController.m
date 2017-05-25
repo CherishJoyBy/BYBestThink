@@ -55,11 +55,10 @@
 // 添加子控制器
 - (void) setupChildViewControllers
 {
-    [self setupOneChildViewController:[[BYNavigationController alloc] initWithRootViewController:[[BYMeViewController alloc] init]] title:@"我" normalImage:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
     [self setupOneChildViewController:[[BYNavigationController alloc] initWithRootViewController:[[BYEssenceViewController alloc] init]] title:@"精华" normalImage:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
-    [self setupOneChildViewController:[[BYNavigationController alloc] initWithRootViewController:[[BYNewViewController alloc] init]] title:@"新帖" normalImage:@"tabBar_new_icon" selectedImage:@"tabBar_new_click_icon"];
-    
+    [self setupOneChildViewController:[[BYNavigationController alloc] initWithRootViewController:[[BYNewViewController alloc] init]] title:@"新帖" normalImage:@"tabBar_new_icon" selectedImage:@"tabBar_new_click_icon"];    
     [self setupOneChildViewController:[[BYNavigationController alloc] initWithRootViewController:[[BYFollowViewController alloc] init]] title:@"关注" normalImage:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
+    [self setupOneChildViewController:[[BYNavigationController alloc] initWithRootViewController:[[BYMeViewController alloc] init]] title:@"我" normalImage:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
 }
 
 /**
