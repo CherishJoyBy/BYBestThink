@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		490271B41EDEB980006B8D66 /* BYTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 490271B31EDEB980006B8D66 /* BYTopic.m */; };
+		490271C01EDFAF85006B8D66 /* BYRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 490271BF1EDFAF85006B8D66 /* BYRefreshHeader.m */; };
+		490271C31EDFAFB3006B8D66 /* BYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 490271C21EDFAFB3006B8D66 /* BYTabBar.m */; };
+		490271CF1EDFC181006B8D66 /* BYRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 490271CE1EDFC181006B8D66 /* BYRefreshFooter.m */; };
 		494C10981EC166400073DDB2 /* NSString+BYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 494C10971EC166400073DDB2 /* NSString+BYExtension.m */; };
 		494CA1F61ED572CD00C101CD /* BYClearCacheCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 494CA1F51ED572CD00C101CD /* BYClearCacheCell.m */; };
 		494CA1FF1ED5FA3200C101CD /* BYAllTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 494CA1FE1ED5FA3200C101CD /* BYAllTableViewController.m */; };
@@ -42,7 +46,6 @@
 		49C2D0C11EB03EAD0092039A /* BYNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C2D0AD1EB03EAD0092039A /* BYNewViewController.m */; };
 		49C2D0C21EB03EAD0092039A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C2D0B21EB03EAD0092039A /* AppDelegate.m */; };
 		49C2D0C31EB03EAD0092039A /* UIView+BYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C2D0B51EB03EAD0092039A /* UIView+BYExtension.m */; };
-		49C2D0C41EB03EAD0092039A /* BYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C2D0B81EB03EAD0092039A /* BYTabBar.m */; };
 		49C2D0C51EB03EAD0092039A /* BYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C2D0BA1EB03EAD0092039A /* BYTabBarController.m */; };
 		49C2D0C61EB03EAD0092039A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C2D0BB1EB03EAD0092039A /* main.m */; };
 		49C2D0CC1EB04BE60092039A /* UIBarButtonItem+BYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C2D0CB1EB04BE60092039A /* UIBarButtonItem+BYExtension.m */; };
@@ -58,6 +61,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		490271B21EDEB980006B8D66 /* BYTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYTopic.h; sourceTree = "<group>"; };
+		490271B31EDEB980006B8D66 /* BYTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYTopic.m; sourceTree = "<group>"; };
+		490271BE1EDFAF85006B8D66 /* BYRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYRefreshHeader.h; sourceTree = "<group>"; };
+		490271BF1EDFAF85006B8D66 /* BYRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYRefreshHeader.m; sourceTree = "<group>"; };
+		490271C11EDFAFB3006B8D66 /* BYTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYTabBar.h; sourceTree = "<group>"; };
+		490271C21EDFAFB3006B8D66 /* BYTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYTabBar.m; sourceTree = "<group>"; };
+		490271CD1EDFC181006B8D66 /* BYRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYRefreshFooter.h; sourceTree = "<group>"; };
+		490271CE1EDFC181006B8D66 /* BYRefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYRefreshFooter.m; sourceTree = "<group>"; };
 		494C10961EC166400073DDB2 /* NSString+BYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+BYExtension.h"; sourceTree = "<group>"; };
 		494C10971EC166400073DDB2 /* NSString+BYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+BYExtension.m"; sourceTree = "<group>"; };
 		494CA1F41ED572CD00C101CD /* BYClearCacheCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYClearCacheCell.h; sourceTree = "<group>"; };
@@ -117,8 +128,6 @@
 		49C2D0B21EB03EAD0092039A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Other/AppDelegate.m; sourceTree = "<group>"; };
 		49C2D0B41EB03EAD0092039A /* UIView+BYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BYExtension.h"; sourceTree = "<group>"; };
 		49C2D0B51EB03EAD0092039A /* UIView+BYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BYExtension.m"; sourceTree = "<group>"; };
-		49C2D0B71EB03EAD0092039A /* BYTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYTabBar.h; path = ../Controller/BYTabBar.h; sourceTree = "<group>"; };
-		49C2D0B81EB03EAD0092039A /* BYTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYTabBar.m; path = ../Controller/BYTabBar.m; sourceTree = "<group>"; };
 		49C2D0B91EB03EAD0092039A /* BYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYTabBarController.h; sourceTree = "<group>"; };
 		49C2D0BA1EB03EAD0092039A /* BYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYTabBarController.m; sourceTree = "<group>"; };
 		49C2D0BB1EB03EAD0092039A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Other/main.m; sourceTree = "<group>"; };
@@ -272,6 +281,8 @@
 		49C2D09C1EB03EAD0092039A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				490271B21EDEB980006B8D66 /* BYTopic.h */,
+				490271B31EDEB980006B8D66 /* BYTopic.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -446,12 +457,16 @@
 		49C2D0BD1EB03EAD0092039A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				49C2D0B71EB03EAD0092039A /* BYTabBar.h */,
-				49C2D0B81EB03EAD0092039A /* BYTabBar.m */,
+				490271C11EDFAFB3006B8D66 /* BYTabBar.h */,
+				490271C21EDFAFB3006B8D66 /* BYTabBar.m */,
 				49C2D0E01EB0A6A70092039A /* BYQuickLoginButton.h */,
 				49C2D0E11EB0A6A70092039A /* BYQuickLoginButton.m */,
 				49C2D0E31EB1AECC0092039A /* BYLoginRegisterTextField.h */,
 				49C2D0E41EB1AECC0092039A /* BYLoginRegisterTextField.m */,
+				490271BE1EDFAF85006B8D66 /* BYRefreshHeader.h */,
+				490271BF1EDFAF85006B8D66 /* BYRefreshHeader.m */,
+				490271CD1EDFC181006B8D66 /* BYRefreshFooter.h */,
+				490271CE1EDFC181006B8D66 /* BYRefreshFooter.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -607,6 +622,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4986FA7B1EB85C480054DF6D /* BYConst.m in Sources */,
+				490271CF1EDFC181006B8D66 /* BYRefreshFooter.m in Sources */,
 				494CA2081ED5FB6400C101CD /* BYPictureTableViewController.m in Sources */,
 				494CA1F61ED572CD00C101CD /* BYClearCacheCell.m in Sources */,
 				494CA20E1ED5FC4800C101CD /* BYTitleButton.m in Sources */,
@@ -628,15 +644,17 @@
 				49C2D0E21EB0A6A70092039A /* BYQuickLoginButton.m in Sources */,
 				49C2D0C21EB03EAD0092039A /* AppDelegate.m in Sources */,
 				49C2D0BF1EB03EAD0092039A /* BYFollowViewController.m in Sources */,
+				490271B41EDEB980006B8D66 /* BYTopic.m in Sources */,
 				4986FA811EB85D280054DF6D /* BYMeFooterView.m in Sources */,
 				4986FA7E1EB85CCF0054DF6D /* BYMeSquare.m in Sources */,
 				49C2D0CC1EB04BE60092039A /* UIBarButtonItem+BYExtension.m in Sources */,
-				49C2D0C41EB03EAD0092039A /* BYTabBar.m in Sources */,
 				49C2D0C31EB03EAD0092039A /* UIView+BYExtension.m in Sources */,
 				49C2D0DE1EB094940092039A /* BYLoginRegisterViewController.m in Sources */,
 				4986FA6F1EB8279E0054DF6D /* UITextField+BYExtension.m in Sources */,
+				490271C31EDFAFB3006B8D66 /* BYTabBar.m in Sources */,
 				494CA2051ED5FA7000C101CD /* BYVoiceTableViewController.m in Sources */,
 				49C2D0C01EB03EAD0092039A /* BYMeViewController.m in Sources */,
+				490271C01EDFAF85006B8D66 /* BYRefreshHeader.m in Sources */,
 				4986FA881EB9C4800054DF6D /* BYWebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

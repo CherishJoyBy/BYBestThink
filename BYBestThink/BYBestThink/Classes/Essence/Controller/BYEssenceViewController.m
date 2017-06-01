@@ -177,12 +177,12 @@
 }
 
 #pragma mark - <UIScrollViewDelegate>
-
+// 代码设置动画结束(called when setContentOffset/scrollRectVisible:animated: finishes. not called if not animating)
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
 {
     [self addChildVcView];
 }
-
+// 手动动画结束
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
     // 选中\点击对应的按钮
