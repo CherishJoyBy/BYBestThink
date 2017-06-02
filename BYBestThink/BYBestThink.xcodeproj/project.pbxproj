@@ -39,6 +39,9 @@
 		4997FEC91EBB23DB004EABEC /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4997FEC81EBB23DB004EABEC /* JavaScriptCore.framework */; };
 		4997FECB1EBB23E5004EABEC /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4997FECA1EBB23E5004EABEC /* libstdc++.tbd */; };
 		4997FECE1EBB287E004EABEC /* BYForgetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4997FECD1EBB287E004EABEC /* BYForgetPasswordViewController.m */; };
+		4998DC3D1EE103020011020C /* BYHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4998DC3C1EE103020011020C /* BYHTTPSessionManager.m */; };
+		4998DC431EE1106E0011020C /* BYTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4998DC411EE1106E0011020C /* BYTopicCell.m */; };
+		4998DC441EE1106E0011020C /* BYTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4998DC421EE1106E0011020C /* BYTopicCell.xib */; };
 		49C2D0521EAF12BD0092039A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49C2D0511EAF12BD0092039A /* Assets.xcassets */; };
 		49C2D0BE1EB03EAD0092039A /* BYEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C2D09B1EB03EAD0092039A /* BYEssenceViewController.m */; };
 		49C2D0BF1EB03EAD0092039A /* BYFollowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C2D0A11EB03EAD0092039A /* BYFollowViewController.m */; };
@@ -115,6 +118,11 @@
 		4997FECA1EBB23E5004EABEC /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		4997FECC1EBB287E004EABEC /* BYForgetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYForgetPasswordViewController.h; sourceTree = "<group>"; };
 		4997FECD1EBB287E004EABEC /* BYForgetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYForgetPasswordViewController.m; sourceTree = "<group>"; };
+		4998DC3B1EE103020011020C /* BYHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYHTTPSessionManager.h; path = Other/BYHTTPSessionManager.h; sourceTree = "<group>"; };
+		4998DC3C1EE103020011020C /* BYHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYHTTPSessionManager.m; path = Other/BYHTTPSessionManager.m; sourceTree = "<group>"; };
+		4998DC401EE1106E0011020C /* BYTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYTopicCell.h; sourceTree = "<group>"; };
+		4998DC411EE1106E0011020C /* BYTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYTopicCell.m; sourceTree = "<group>"; };
+		4998DC421EE1106E0011020C /* BYTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BYTopicCell.xib; sourceTree = "<group>"; };
 		49C2D0511EAF12BD0092039A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49C2D09A1EB03EAD0092039A /* BYEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYEssenceViewController.h; sourceTree = "<group>"; };
 		49C2D09B1EB03EAD0092039A /* BYEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYEssenceViewController.m; sourceTree = "<group>"; };
@@ -230,6 +238,26 @@
 			path = SMS_SDK;
 			sourceTree = "<group>";
 		};
+		4998DC3E1EE109030011020C /* Const */ = {
+			isa = PBXGroup;
+			children = (
+				4986FA791EB85C480054DF6D /* BYConst.h */,
+				4986FA7A1EB85C480054DF6D /* BYConst.m */,
+			);
+			name = Const;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		4998DC3F1EE109570011020C /* BYNetWorkTool */ = {
+			isa = PBXGroup;
+			children = (
+				4998DC3B1EE103020011020C /* BYHTTPSessionManager.h */,
+				4998DC3C1EE103020011020C /* BYHTTPSessionManager.m */,
+			);
+			name = BYNetWorkTool;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		49C2D0971EB03EAD0092039A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,8 +271,6 @@
 				49C2D0B21EB03EAD0092039A /* AppDelegate.m */,
 				49C2D0BB1EB03EAD0092039A /* main.m */,
 				49C2D0BC1EB03EAD0092039A /* PrefixHeader.pch */,
-				4986FA791EB85C480054DF6D /* BYConst.h */,
-				4986FA7A1EB85C480054DF6D /* BYConst.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -292,6 +318,9 @@
 			children = (
 				494CA20C1ED5FC4800C101CD /* BYTitleButton.h */,
 				494CA20D1ED5FC4800C101CD /* BYTitleButton.m */,
+				4998DC401EE1106E0011020C /* BYTopicCell.h */,
+				4998DC411EE1106E0011020C /* BYTopicCell.m */,
+				4998DC421EE1106E0011020C /* BYTopicCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -419,6 +448,8 @@
 				49C2D0B31EB03EAD0092039A /* Category */,
 				49C2D0B61EB03EAD0092039A /* Controller */,
 				49C2D0BD1EB03EAD0092039A /* View */,
+				4998DC3E1EE109030011020C /* Const */,
+				4998DC3F1EE109570011020C /* BYNetWorkTool */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -559,6 +590,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4998DC441EE1106E0011020C /* BYTopicCell.xib in Resources */,
 				4986FA891EB9C4800054DF6D /* BYWebViewController.xib in Resources */,
 				49C2D0DA1EB089980092039A /* BYFollowViewController.xib in Resources */,
 				49C2D0521EAF12BD0092039A /* Assets.xcassets in Resources */,
@@ -624,6 +656,7 @@
 				4986FA7B1EB85C480054DF6D /* BYConst.m in Sources */,
 				490271CF1EDFC181006B8D66 /* BYRefreshFooter.m in Sources */,
 				494CA2081ED5FB6400C101CD /* BYPictureTableViewController.m in Sources */,
+				4998DC3D1EE103020011020C /* BYHTTPSessionManager.m in Sources */,
 				494CA1F61ED572CD00C101CD /* BYClearCacheCell.m in Sources */,
 				494CA20E1ED5FC4800C101CD /* BYTitleButton.m in Sources */,
 				4986FA721EB858EC0054DF6D /* BYMeCell.m in Sources */,
@@ -647,6 +680,7 @@
 				490271B41EDEB980006B8D66 /* BYTopic.m in Sources */,
 				4986FA811EB85D280054DF6D /* BYMeFooterView.m in Sources */,
 				4986FA7E1EB85CCF0054DF6D /* BYMeSquare.m in Sources */,
+				4998DC431EE1106E0011020C /* BYTopicCell.m in Sources */,
 				49C2D0CC1EB04BE60092039A /* UIBarButtonItem+BYExtension.m in Sources */,
 				49C2D0C31EB03EAD0092039A /* UIView+BYExtension.m in Sources */,
 				49C2D0DE1EB094940092039A /* BYLoginRegisterViewController.m in Sources */,

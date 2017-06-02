@@ -7,12 +7,14 @@
 //
 
 #import "BYVideoTableViewController.h"
-#import <AFNetworking.h>
+#import "BYHTTPSessionManager.h"
 #import "BYTopic.h"
 #import <MJExtension.h>
 #import <UIImageView+WebCache.h>
 #import "BYRefreshHeader.h"
 #import "BYRefreshFooter.h"
+#import "BYTopicCell.h"
+
 
 @interface BYVideoTableViewController ()
 
@@ -21,6 +23,8 @@
 @property (nonatomic, strong) NSString *maxtime;
 
 @end
+
+static NSString *BYTopicCellId = @"BYTopicCell";
 
 @implementation BYVideoTableViewController
 
@@ -32,9 +36,21 @@
     self.tableView.contentInset = UIEdgeInsetsMake(64 + 35, 0, 49, 0);
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
     
+    [self setupTable];
+    
     [self setupRefresh];
 }
 
+- (void)setupTable
+{
+    self.tableView.backgroundColor = BYCommonBgColor;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.contentInset = UIEdgeInsetsMake(64 + 35, 0, 49, 0);
+    self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
+    
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([BYTopicCell class]) bundle:nil] forCellReuseIdentifier:BYTopicCellId];
+    self.tableView.rowHeight = 250;
+}
 - (void)setupRefresh
 {
     self.tableView.mj_header = [BYRefreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewTopics:)];
@@ -47,6 +63,8 @@
 
 - (void)loadMoreTopics
 {
+    [[BYHTTPSessionManager sharedHTTPSessionManager].tasks makeObjectsPerformSelector:@selector(cancel)];
+    
     // 参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
@@ -54,7 +72,7 @@
     params[@"maxtime"] = self.maxtime;
     
     NSString *URLString = @"http://api.budejie.com/api/api_open.php";
-    [[AFHTTPSessionManager manager] GET:URLString parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *  _Nullable responseObject) {
+    [[BYHTTPSessionManager sharedHTTPSessionManager] GET:URLString parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *  _Nullable responseObject) {
         
         self.maxtime = responseObject[@"info"][@"maxtime"];
         
@@ -72,13 +90,15 @@
 
 - (void)loadNewTopics:(UIRefreshControl *)control
 {
+    [[BYHTTPSessionManager sharedHTTPSessionManager].tasks makeObjectsPerformSelector:@selector(cancel)];
+    
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"data";
     params[@"type"] = @(41);
     
     NSString *URLString = @"http://api.budejie.com/api/api_open.php";
-    [[AFHTTPSessionManager manager] GET:URLString parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *  _Nullable responseObject) {
+    [[BYHTTPSessionManager sharedHTTPSessionManager] GET:URLString parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *  _Nullable responseObject) {
         
         self.maxtime = responseObject[@"info"][@"maxtime"];
         
@@ -98,22 +118,12 @@
     return self.topics.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    // 1.确定重用标示:
-    static NSString *ID = @"cell";
-    
-    // 2.从缓存池中取
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    // 3.如果空就手动创建
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
-        cell.backgroundColor = BYRandomColor;
-    }
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{    
+    BYTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:BYTopicCellId forIndexPath:indexPath];
     
     BYTopic *topic = self.topics[indexPath.row];
-    cell.textLabel.text = topic.name;
-    cell.detailTextLabel.text = topic.text;
-    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    cell.topic = topic;
 
     
     return cell;

@@ -7,12 +7,13 @@
 //
 
 #import "BYAllTableViewController.h"
-#import <AFNetworking.h>
+#import "BYHTTPSessionManager.h"
 #import "BYTopic.h"
 #import <MJExtension.h>
 #import <UIImageView+WebCache.h>
 #import "BYRefreshHeader.h"
 #import "BYRefreshFooter.h"
+#import "BYTopicCell.h"
 
 @interface BYAllTableViewController ()
 // 所有帖子
@@ -22,6 +23,8 @@
 
 @end
 
+static NSString *BYTopicCellId = @"BYTopicCell";
+
 @implementation BYAllTableViewController
 
 - (void)viewDidLoad {
@@ -29,10 +32,20 @@
     
     BYLogFunc
     
+    [self setupTable];
+    
+    [self setupRefresh];
+}
+
+- (void)setupTable
+{
+    self.tableView.backgroundColor = BYCommonBgColor;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.contentInset = UIEdgeInsetsMake(64 + 35, 0, 49, 0);
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
     
-    [self setupRefresh];
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([BYTopicCell class]) bundle:nil] forCellReuseIdentifier:BYTopicCellId];
+    self.tableView.rowHeight = 250;
 }
 
 - (void)setupRefresh
@@ -49,6 +62,9 @@
 
 - (void)loadMoreTopics
 {
+    // 取消所有请求任务
+    [[BYHTTPSessionManager sharedHTTPSessionManager].tasks makeObjectsPerformSelector:@selector(cancel)];
+    
     // 参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
@@ -56,7 +72,7 @@
     params[@"maxtime"] = self.maxtime;
     
     NSString *URLString = @"http://api.budejie.com/api/api_open.php";
-    [[AFHTTPSessionManager manager] GET:URLString parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *  _Nullable responseObject) {
+    [[BYHTTPSessionManager sharedHTTPSessionManager] GET:URLString parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *  _Nullable responseObject) {
         
         self.maxtime = responseObject[@"info"][@"maxtime"];
         
@@ -67,6 +83,7 @@
         [self.tableView.mj_footer endRefreshing];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
         BYLog(@"请求失败 - %@", error);
         [self.tableView.mj_footer endRefreshing];
     }];
@@ -74,12 +91,15 @@
 
 - (void)loadNewTopics:(UIRefreshControl *)control
 {
+    // 取消所有请求任务
+    [[BYHTTPSessionManager sharedHTTPSessionManager].tasks makeObjectsPerformSelector:@selector(cancel)];
+    
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"data";
     
     NSString *URLString = @"http://api.budejie.com/api/api_open.php";
-    [[AFHTTPSessionManager manager] GET:URLString parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *  _Nullable responseObject) {
+    [[BYHTTPSessionManager manager] GET:URLString parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *  _Nullable responseObject) {
         
         self.maxtime = responseObject[@"info"][@"maxtime"];
         
@@ -89,6 +109,7 @@
         [self.tableView.mj_header endRefreshing];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
         BYLog(@"请求失败 - %@", error);
         [self.tableView.mj_header endRefreshing];
     }];
@@ -102,20 +123,19 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *ID = @"cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    BYTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:BYTopicCellId forIndexPath:indexPath];
     
-    if (!cell)
-    {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
-        cell.backgroundColor = BYRandomColor;
-    }
     BYTopic *topic = self.topics[indexPath.row];
-    cell.textLabel.text = topic.name;
-    cell.detailTextLabel.text = topic.text;
-    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    cell.topic = topic;
     
     return cell;
 }
+
+#pragma mark - Table view delegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+}
+
 
 @end

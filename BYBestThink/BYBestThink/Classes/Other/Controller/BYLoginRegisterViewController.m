@@ -27,9 +27,9 @@
 - (void)setupNav
 {
     // 隐藏导航条下的线
-    UIImage *tempImage = [[UIImage alloc] init];
-    [self.navigationController.navigationBar setBackgroundImage:tempImage forBarMetrics:UIBarMetricsDefault];
-    [self.navigationController.navigationBar setShadowImage:tempImage];
+//    UIImage *tempImage = [[UIImage alloc] init];
+//    [self.navigationController.navigationBar setBackgroundImage:tempImage forBarMetrics:UIBarMetricsDefault];
+//    [self.navigationController.navigationBar setShadowImage:tempImage];
     
     // 关闭
     UIButton *closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -101,12 +101,12 @@
 
 #pragma mark - Life Cycle
 
-//- (void)viewWillAppear:(BOOL)animated
-//{
-//    UIImage *tempImage = [[UIImage alloc] init];
-//    [self.navigationController.navigationBar setBackgroundImage:tempImage forBarMetrics:UIBarMetricsDefault];
-//    [self.navigationController.navigationBar setShadowImage:tempImage];
-//}
+- (void)viewWillAppear:(BOOL)animated
+{
+    UIImage *tempImage = [[UIImage alloc] init];
+    [self.navigationController.navigationBar setBackgroundImage:tempImage forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setShadowImage:tempImage];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
