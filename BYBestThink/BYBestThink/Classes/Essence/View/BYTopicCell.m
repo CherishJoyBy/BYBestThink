@@ -20,6 +20,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *caiButton;
 @property (weak, nonatomic) IBOutlet UIButton *repostButton;
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;
+    
+// 最热评论
+@property (weak, nonatomic) IBOutlet UIView *topCmtView;
+@property (weak, nonatomic) IBOutlet UILabel *topCmtContentLabel;
 
 @end
 
@@ -44,6 +48,24 @@
     [self setupButton:self.caiButton number:topic.cai placeholder:@"踩"];
     [self setupButton:self.repostButton number:topic.repost placeholder:@"分享"];
     [self setupButton:self.commentButton number:topic.comment placeholder:@"评论"];
+    
+    NSDictionary *comment = topic.top_cmt.firstObject;
+    if (comment)
+    {
+        // 有最热评论
+        self.topCmtView.hidden = NO;
+        
+        NSString *username = comment[@"user"][@"username"];
+        // 用户名
+        NSString *content = comment[@"content"];
+        // 评论内容
+        self.topCmtContentLabel.text = [NSString stringWithFormat:@"%@ : %@", username, content];
+    }
+    else
+    {
+        // 没有最热评论
+        self.topCmtView.hidden = YES;
+    }
 }
 
 // 设置按钮的数字

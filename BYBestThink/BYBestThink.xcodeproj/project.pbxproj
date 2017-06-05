@@ -11,6 +11,8 @@
 		490271C01EDFAF85006B8D66 /* BYRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 490271BF1EDFAF85006B8D66 /* BYRefreshHeader.m */; };
 		490271C31EDFAFB3006B8D66 /* BYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 490271C21EDFAFB3006B8D66 /* BYTabBar.m */; };
 		490271CF1EDFC181006B8D66 /* BYRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 490271CE1EDFC181006B8D66 /* BYRefreshFooter.m */; };
+		491C95E71EE4ECD8006AB4D6 /* NSDate+BYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 491C95E61EE4ECD8006AB4D6 /* NSDate+BYExtension.m */; };
+		491C95EA1EE4EDD9006AB4D6 /* NSCalendar+BYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 491C95E91EE4EDD9006AB4D6 /* NSCalendar+BYExtension.m */; };
 		494C10981EC166400073DDB2 /* NSString+BYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 494C10971EC166400073DDB2 /* NSString+BYExtension.m */; };
 		494CA1F61ED572CD00C101CD /* BYClearCacheCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 494CA1F51ED572CD00C101CD /* BYClearCacheCell.m */; };
 		494CA1FF1ED5FA3200C101CD /* BYAllTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 494CA1FE1ED5FA3200C101CD /* BYAllTableViewController.m */; };
@@ -72,6 +74,10 @@
 		490271C21EDFAFB3006B8D66 /* BYTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYTabBar.m; sourceTree = "<group>"; };
 		490271CD1EDFC181006B8D66 /* BYRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYRefreshFooter.h; sourceTree = "<group>"; };
 		490271CE1EDFC181006B8D66 /* BYRefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYRefreshFooter.m; sourceTree = "<group>"; };
+		491C95E51EE4ECD8006AB4D6 /* NSDate+BYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+BYExtension.h"; sourceTree = "<group>"; };
+		491C95E61EE4ECD8006AB4D6 /* NSDate+BYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+BYExtension.m"; sourceTree = "<group>"; };
+		491C95E81EE4EDD9006AB4D6 /* NSCalendar+BYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCalendar+BYExtension.h"; sourceTree = "<group>"; };
+		491C95E91EE4EDD9006AB4D6 /* NSCalendar+BYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCalendar+BYExtension.m"; sourceTree = "<group>"; };
 		494C10961EC166400073DDB2 /* NSString+BYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+BYExtension.h"; sourceTree = "<group>"; };
 		494C10971EC166400073DDB2 /* NSString+BYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+BYExtension.m"; sourceTree = "<group>"; };
 		494CA1F41ED572CD00C101CD /* BYClearCacheCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYClearCacheCell.h; sourceTree = "<group>"; };
@@ -465,6 +471,10 @@
 				4986FA6E1EB8279E0054DF6D /* UITextField+BYExtension.m */,
 				494C10961EC166400073DDB2 /* NSString+BYExtension.h */,
 				494C10971EC166400073DDB2 /* NSString+BYExtension.m */,
+				491C95E51EE4ECD8006AB4D6 /* NSDate+BYExtension.h */,
+				491C95E61EE4ECD8006AB4D6 /* NSDate+BYExtension.m */,
+				491C95E81EE4EDD9006AB4D6 /* NSCalendar+BYExtension.h */,
+				491C95E91EE4EDD9006AB4D6 /* NSCalendar+BYExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -660,6 +670,7 @@
 				494CA1F61ED572CD00C101CD /* BYClearCacheCell.m in Sources */,
 				494CA20E1ED5FC4800C101CD /* BYTitleButton.m in Sources */,
 				4986FA721EB858EC0054DF6D /* BYMeCell.m in Sources */,
+				491C95EA1EE4EDD9006AB4D6 /* NSCalendar+BYExtension.m in Sources */,
 				49C2D0D81EB069930092039A /* BYSettingViewController.m in Sources */,
 				494C10981EC166400073DDB2 /* NSString+BYExtension.m in Sources */,
 				494CA20B1ED5FB7B00C101CD /* BYWordTableViewController.m in Sources */,
@@ -682,6 +693,7 @@
 				4986FA7E1EB85CCF0054DF6D /* BYMeSquare.m in Sources */,
 				4998DC431EE1106E0011020C /* BYTopicCell.m in Sources */,
 				49C2D0CC1EB04BE60092039A /* UIBarButtonItem+BYExtension.m in Sources */,
+				491C95E71EE4ECD8006AB4D6 /* NSDate+BYExtension.m in Sources */,
 				49C2D0C31EB03EAD0092039A /* UIView+BYExtension.m in Sources */,
 				49C2D0DE1EB094940092039A /* BYLoginRegisterViewController.m in Sources */,
 				4986FA6F1EB8279E0054DF6D /* UITextField+BYExtension.m in Sources */,

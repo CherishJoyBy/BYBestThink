@@ -79,6 +79,12 @@ static NSString *BYTopicCellId = @"BYTopicCell";
         NSArray<BYTopic *> *moreTopics = [BYTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         [self.topics addObjectsFromArray:moreTopics];
         
+        for (NSUInteger i = 0; i < moreTopics.count; i++) {
+            if (moreTopics[i].top_cmt.count) { // 最热评论
+                BYLog(@"上拉刷新 - %zd", i);
+            }
+        }
+        
         [self.tableView reloadData];
         [self.tableView.mj_footer endRefreshing];
         

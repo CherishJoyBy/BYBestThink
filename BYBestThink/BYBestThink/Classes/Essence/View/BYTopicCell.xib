@@ -179,6 +179,8 @@
                 <outlet property="profileImageView" destination="UVi-x5-DAO" id="JnW-mb-9lz"/>
                 <outlet property="repostButton" destination="FdG-qU-L51" id="CzW-XE-JQF"/>
                 <outlet property="textContentLabel" destination="pSq-wp-hQz" id="k4G-S8-63C"/>
+                <outlet property="topCmtContentLabel" destination="a4R-aA-FBX" id="IFu-V3-nMf"/>
+                <outlet property="topCmtView" destination="YpW-Lt-SgD" id="MrY-vh-8Zg"/>
             </connections>
             <point key="canvasLocation" x="37" y="38"/>
         </tableViewCell>
