@@ -14,6 +14,8 @@
 {
     [super prepare];
     
+    self.automaticallyChangeAlpha = YES;
+    
     self.stateLabel.textColor = [UIColor orangeColor];
     
     // 设置正在刷新状态的动画图片

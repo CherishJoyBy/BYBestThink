@@ -14,6 +14,8 @@
 {
     [super prepare];
     
+    self.automaticallyChangeAlpha = YES;
+    
     self.stateLabel.textColor = [UIColor orangeColor];
     self.lastUpdatedTimeLabel.textColor = [UIColor orangeColor];
     // 设置时间

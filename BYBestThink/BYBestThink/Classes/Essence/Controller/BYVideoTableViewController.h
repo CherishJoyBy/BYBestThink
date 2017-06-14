@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BYTopicViewController.h"
 
-@interface BYVideoTableViewController : UITableViewController
+@interface BYVideoTableViewController : BYTopicViewController
 
 @end

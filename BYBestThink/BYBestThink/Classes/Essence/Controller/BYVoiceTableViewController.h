@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BYTopicViewController.h"
 
-@interface BYVoiceTableViewController : UITableViewController
+@interface BYVoiceTableViewController : BYTopicViewController
 
 @end

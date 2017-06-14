@@ -102,4 +102,9 @@
     self.by_y = by_bottom - self.by_height;
 }
 
++ (instancetype)viewFromXib
+{
+    return [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil].lastObject;
+}
+
 @end

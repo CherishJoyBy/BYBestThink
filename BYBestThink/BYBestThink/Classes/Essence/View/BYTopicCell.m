@@ -9,6 +9,12 @@
 #import "BYTopicCell.h"
 #import <UIImageView+WebCache.h>
 #import "BYTopic.h"
+#import "BYComment.h"
+#import "BYUser.h"
+#import "BYTopicPictureView.h"
+#import "BYTopicVoiceView.h"
+#import "BYTopicVideoView.h"
+
 
 @interface BYTopicCell ()
 
@@ -25,9 +31,49 @@
 @property (weak, nonatomic) IBOutlet UIView *topCmtView;
 @property (weak, nonatomic) IBOutlet UILabel *topCmtContentLabel;
 
+/*
+  中间控件
+ */
+// 图片控件
+@property (nonatomic, weak) BYTopicPictureView *pictureView;
+// 声音控件
+@property (nonatomic, weak) BYTopicVoiceView *voiceView;
+// 视频控件
+@property (nonatomic, weak) BYTopicVideoView *videoView;
+
 @end
 
 @implementation BYTopicCell
+
+- (BYTopicPictureView *)pictureView
+{
+    if (!_pictureView) {
+        BYTopicPictureView *pictureView = [BYTopicPictureView viewFromXib];
+        [self.contentView addSubview:pictureView];
+        _pictureView = pictureView;
+    }
+    return _pictureView;
+}
+
+- (BYTopicVoiceView *)voiceView
+{
+    if (!_voiceView) {
+        BYTopicVoiceView *voiceView = [BYTopicVoiceView viewFromXib];
+        [self.contentView addSubview:voiceView];
+        _voiceView = voiceView;
+    }
+    return _voiceView;
+}
+
+- (BYTopicVideoView *)videoView
+{
+    if (!_videoView) {
+        BYTopicVideoView *videoView = [BYTopicVideoView viewFromXib];
+        [self.contentView addSubview:videoView];
+        _videoView = videoView;
+    }
+    return _videoView;
+}
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -49,15 +95,14 @@
     [self setupButton:self.repostButton number:topic.repost placeholder:@"分享"];
     [self setupButton:self.commentButton number:topic.comment placeholder:@"评论"];
     
-    NSDictionary *comment = topic.top_cmt.firstObject;
-    if (comment)
+    if (topic.top_cmt)
     {
         // 有最热评论
         self.topCmtView.hidden = NO;
         
-        NSString *username = comment[@"user"][@"username"];
+        NSString *username = topic.top_cmt.user.username;
         // 用户名
-        NSString *content = comment[@"content"];
+        NSString *content = topic.top_cmt.content;
         // 评论内容
         self.topCmtContentLabel.text = [NSString stringWithFormat:@"%@ : %@", username, content];
     }
@@ -65,6 +110,45 @@
     {
         // 没有最热评论
         self.topCmtView.hidden = YES;
+    }
+    
+    // 中间内容
+    if (topic.type == BYTopicTypeVideo)
+    {
+        // 视频
+        self.videoView.hidden = NO;
+        self.videoView.frame = topic.contentF;
+        self.videoView.topic = topic;
+        
+        self.voiceView.hidden = YES;
+        self.pictureView.hidden = YES;
+    }
+    else if (topic.type == BYTopicTypeVoice)
+    {
+        // 音频
+        self.voiceView.hidden = NO;
+        self.voiceView.frame = topic.contentF;
+        self.voiceView.topic = topic;
+        
+        self.videoView.hidden = YES;
+        self.pictureView.hidden = YES;
+    }
+    else if (topic.type == BYTopicTypeJoke)
+    {
+        // 段子
+        self.videoView.hidden = YES;
+        self.voiceView.hidden = YES;
+        self.pictureView.hidden = YES;
+    }
+    else if (topic.type == BYTopicTypePicture)
+    {
+        // 图片
+        self.pictureView.hidden = NO;
+        self.pictureView.frame = topic.contentF;
+        self.pictureView.topic = topic;
+        
+        self.videoView.hidden = YES;
+        self.voiceView.hidden = YES;
     }
 }
 
@@ -87,7 +171,7 @@
 - (void)setFrame:(CGRect)frame
 {
 //    frame.size.height -= BYMargin;
-    frame.origin.y += 1;
+    frame.origin.y += BYCellMargin;
     //    frame.origin.x += XMGMargin;
     //    frame.size.width -= 2 * XMGMargin;
     

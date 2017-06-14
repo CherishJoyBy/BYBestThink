@@ -7,6 +7,8 @@
 //
 
 #import "BYTopic.h"
+#import "BYComment.h"
+#import "BYUser.h"
 
 @implementation BYTopic
 
@@ -72,6 +74,59 @@ static const NSCalendar *kBYCalenda;
         return _created_at;
     }
 
+}
+
+- (CGFloat)cellHeight
+{
+    // 如果cell的高度已计算, 直接返回
+    if (_cellHeight) return _cellHeight;
+    
+    // 头像
+    _cellHeight = 55;
+    
+    // 文字
+    CGFloat textMaxW = [UIScreen mainScreen].bounds.size.width - 2 * BYMargin;
+    CGSize textMaxSize = CGSizeMake(textMaxW, MAXFLOAT);
+    // CGSize textSize = [self.text sizeWithFont:[UIFont systemFontOfSize:15] constrainedToSize:textMaxSize];
+    CGSize textSize = [self.text boundingRectWithSize:textMaxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:15]} context:nil].size;
+    _cellHeight += textSize.height + BYMargin;
+    
+    // 中间的内容
+    if (self.type != BYTopicTypeJoke)
+    {
+        // 如果是图片\声音\视频帖子, 要计算中间内容的高度
+        // 中间内容的高度 == 中间内容的宽度 * 图片的真实高度 / 图片的真实宽度
+        CGFloat contentH = textMaxW * self.height / self.width;
+        
+        if (contentH >= [UIScreen mainScreen].bounds.size.height)
+        {
+            // 将超长图片的高度变为200
+            contentH = 200;
+            self.bigPicture = YES;
+        }
+        
+        self.contentF = CGRectMake(BYMargin, _cellHeight, textMaxW, contentH);
+        
+        // 累加中间内容的高度
+        _cellHeight += contentH + BYMargin;
+    }
+    
+    // 最热评论
+    if (self.top_cmt)
+    {
+        // 最热评论-标题
+        _cellHeight += 20;
+        // 最热评论-内容
+        NSString *topCmtContent = [NSString stringWithFormat:@"%@ : %@", self.top_cmt.user.username, self.top_cmt.content];
+        // CGSize topCmtContentSize = [topCmtContent sizeWithFont:[UIFont systemFontOfSize:14] constrainedToSize:textMaxSize];
+        CGSize topCmtContentSize = [topCmtContent boundingRectWithSize:textMaxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14]} context:nil].size;
+        _cellHeight += topCmtContentSize.height + BYMargin;
+    }
+    
+    // 底部 - 工具条
+    _cellHeight += 35 + BYMargin;
+    
+    return _cellHeight;
 }
 
 @end
