@@ -6,8 +6,8 @@
 //  Copyright © 2017年 lby. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BYEssenceViewController.h"
 
-@interface BYNewViewController : UIViewController
+@interface BYNewViewController : BYEssenceViewController
 
 @end

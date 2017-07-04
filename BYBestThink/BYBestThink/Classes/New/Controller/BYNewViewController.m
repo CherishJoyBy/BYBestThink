@@ -17,18 +17,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = BYCommonBgColor;
-    
-    // 标题
-    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
-    // 左边
-    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"MainTagSubIcon" highImage:@"MainTagSubIconClick" target:self action:@selector(tagClick)];
+//    self.view.backgroundColor = BYCommonBgColor;
+//    
+//    // 标题
+//    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
+//    // 左边
+//    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"MainTagSubIcon" highImage:@"MainTagSubIconClick" target:self action:@selector(tagClick)];
 }
 
-- (void)tagClick
-{
-    BYLogFunc
-}
+//- (void)tagClick
+//{
+//    BYLogFunc
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

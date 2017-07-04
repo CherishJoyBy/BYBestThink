@@ -11,6 +11,16 @@
 		490271C01EDFAF85006B8D66 /* BYRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 490271BF1EDFAF85006B8D66 /* BYRefreshHeader.m */; };
 		490271C31EDFAFB3006B8D66 /* BYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 490271C21EDFAFB3006B8D66 /* BYTabBar.m */; };
 		490271CF1EDFC181006B8D66 /* BYRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 490271CE1EDFC181006B8D66 /* BYRefreshFooter.m */; };
+		491AB30E1EEF062C00112205 /* BYComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 491AB30D1EEF062C00112205 /* BYComment.m */; };
+		491AB3111EEF063B00112205 /* BYUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 491AB3101EEF063B00112205 /* BYUser.m */; };
+		491AB3141EEF069E00112205 /* BYExtensionConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 491AB3131EEF069E00112205 /* BYExtensionConfig.m */; };
+		491AB6841EF0EAB600112205 /* BYTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 491AB6831EF0EAB600112205 /* BYTopicPictureView.m */; };
+		491AB6871EF0EAD700112205 /* BYTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 491AB6861EF0EAD700112205 /* BYTopicVideoView.m */; };
+		491AB68A1EF0EAEA00112205 /* BYTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 491AB6891EF0EAEA00112205 /* BYTopicVoiceView.m */; };
+		491AB68C1EF0EB0000112205 /* BYTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 491AB68B1EF0EB0000112205 /* BYTopicPictureView.xib */; };
+		491AB68E1EF0EB7900112205 /* BYTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 491AB68D1EF0EB7900112205 /* BYTopicVideoView.xib */; };
+		491AB6901EF0EB8200112205 /* BYTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 491AB68F1EF0EB8200112205 /* BYTopicVoiceView.xib */; };
+		491AB6931EF1241E00112205 /* BYTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 491AB6921EF1241E00112205 /* BYTopicViewController.m */; };
 		491C95E71EE4ECD8006AB4D6 /* NSDate+BYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 491C95E61EE4ECD8006AB4D6 /* NSDate+BYExtension.m */; };
 		491C95EA1EE4EDD9006AB4D6 /* NSCalendar+BYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 491C95E91EE4EDD9006AB4D6 /* NSCalendar+BYExtension.m */; };
 		494C10981EC166400073DDB2 /* NSString+BYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 494C10971EC166400073DDB2 /* NSString+BYExtension.m */; };
@@ -29,9 +39,6 @@
 		4986FA841EB886560054DF6D /* BYMeSquareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986FA831EB886560054DF6D /* BYMeSquareButton.m */; };
 		4986FA881EB9C4800054DF6D /* BYWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4986FA861EB9C4800054DF6D /* BYWebViewController.m */; };
 		4986FA891EB9C4800054DF6D /* BYWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4986FA871EB9C4800054DF6D /* BYWebViewController.xib */; };
-		4997FEB91EBB2327004EABEC /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4997FEB61EBB2327004EABEC /* MOBFoundation.framework */; };
-		4997FEBA1EBB2327004EABEC /* MOBFoundationEx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4997FEB71EBB2327004EABEC /* MOBFoundationEx.framework */; };
-		4997FEBB1EBB2327004EABEC /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4997FEB81EBB2327004EABEC /* SMS_SDK.framework */; };
 		4997FEBD1EBB2399004EABEC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4997FEBC1EBB2399004EABEC /* SystemConfiguration.framework */; };
 		4997FEBF1EBB23A0004EABEC /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4997FEBE1EBB23A0004EABEC /* CoreTelephony.framework */; };
 		4997FEC11EBB23A9004EABEC /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4997FEC01EBB23A9004EABEC /* AdSupport.framework */; };
@@ -62,6 +69,8 @@
 		49C2D0DF1EB094940092039A /* BYLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49C2D0DD1EB094940092039A /* BYLoginRegisterViewController.xib */; };
 		49C2D0E21EB0A6A70092039A /* BYQuickLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C2D0E11EB0A6A70092039A /* BYQuickLoginButton.m */; };
 		49C2D0E51EB1AECC0092039A /* BYLoginRegisterTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C2D0E41EB1AECC0092039A /* BYLoginRegisterTextField.m */; };
+		49D758681EFA3FEF00748F80 /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49D758651EFA3FEF00748F80 /* MOBFoundation.framework */; };
+		49D758691EFA3FEF00748F80 /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49D758671EFA3FEF00748F80 /* SMS_SDK.framework */; };
 		D40E269659FA02BAC5573BAD /* libPods-BYBestThink.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 678D6574E4183531125CC11D /* libPods-BYBestThink.a */; };
 /* End PBXBuildFile section */
 
@@ -128,9 +137,6 @@
 		4986FA851EB9C4800054DF6D /* BYWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYWebViewController.h; sourceTree = "<group>"; };
 		4986FA861EB9C4800054DF6D /* BYWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYWebViewController.m; sourceTree = "<group>"; };
 		4986FA871EB9C4800054DF6D /* BYWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BYWebViewController.xib; sourceTree = "<group>"; };
-		4997FEB61EBB2327004EABEC /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
-		4997FEB71EBB2327004EABEC /* MOBFoundationEx.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundationEx.framework; sourceTree = "<group>"; };
-		4997FEB81EBB2327004EABEC /* SMS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMS_SDK.framework; sourceTree = "<group>"; };
 		4997FEBC1EBB2399004EABEC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		4997FEBE1EBB23A0004EABEC /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		4997FEC01EBB23A9004EABEC /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
@@ -179,6 +185,8 @@
 		49C2D0E11EB0A6A70092039A /* BYQuickLoginButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYQuickLoginButton.m; sourceTree = "<group>"; };
 		49C2D0E31EB1AECC0092039A /* BYLoginRegisterTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYLoginRegisterTextField.h; sourceTree = "<group>"; };
 		49C2D0E41EB1AECC0092039A /* BYLoginRegisterTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYLoginRegisterTextField.m; sourceTree = "<group>"; };
+		49D758651EFA3FEF00748F80 /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
+		49D758671EFA3FEF00748F80 /* SMS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMS_SDK.framework; sourceTree = "<group>"; };
 		5A3BBC7BF35B6E8994951A6B /* Pods-BYBestThink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BYBestThink.release.xcconfig"; path = "Pods/Target Support Files/Pods-BYBestThink/Pods-BYBestThink.release.xcconfig"; sourceTree = "<group>"; };
 		678D6574E4183531125CC11D /* libPods-BYBestThink.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BYBestThink.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5C8632245AA4E3D827E8594 /* Pods-BYBestThink.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BYBestThink.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BYBestThink/Pods-BYBestThink.debug.xcconfig"; sourceTree = "<group>"; };
@@ -190,17 +198,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				4997FECB1EBB23E5004EABEC /* libstdc++.tbd in Frameworks */,
+				49D758691EFA3FEF00748F80 /* SMS_SDK.framework in Frameworks */,
 				4997FEC91EBB23DB004EABEC /* JavaScriptCore.framework in Frameworks */,
+				49D758681EFA3FEF00748F80 /* MOBFoundation.framework in Frameworks */,
 				4997FEC71EBB23D2004EABEC /* MessageUI.framework in Frameworks */,
 				4997FEC51EBB23C9004EABEC /* libicucore.tbd in Frameworks */,
 				4997FEC31EBB23BC004EABEC /* libz.tbd in Frameworks */,
 				4997FEC11EBB23A9004EABEC /* AdSupport.framework in Frameworks */,
 				4997FEBF1EBB23A0004EABEC /* CoreTelephony.framework in Frameworks */,
 				4997FEBD1EBB2399004EABEC /* SystemConfiguration.framework in Frameworks */,
-				4997FEB91EBB2327004EABEC /* MOBFoundation.framework in Frameworks */,
-				4997FEBB1EBB2327004EABEC /* SMS_SDK.framework in Frameworks */,
 				D40E269659FA02BAC5573BAD /* libPods-BYBestThink.a in Frameworks */,
-				4997FEBA1EBB2327004EABEC /* MOBFoundationEx.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,24 +250,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		4997FEB41EBB2327004EABEC /* SDK */ = {
-			isa = PBXGroup;
-			children = (
-				4997FEB51EBB2327004EABEC /* SMS_SDK */,
-			);
-			path = SDK;
-			sourceTree = "<group>";
-		};
-		4997FEB51EBB2327004EABEC /* SMS_SDK */ = {
-			isa = PBXGroup;
-			children = (
-				4997FEB61EBB2327004EABEC /* MOBFoundation.framework */,
-				4997FEB71EBB2327004EABEC /* MOBFoundationEx.framework */,
-				4997FEB81EBB2327004EABEC /* SMS_SDK.framework */,
-			);
-			path = SMS_SDK;
-			sourceTree = "<group>";
-		};
 		4998DC3E1EE109030011020C /* Const */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,7 +273,7 @@
 		49C2D0971EB03EAD0092039A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				4997FEB41EBB2327004EABEC /* SDK */,
+				49D758631EFA3FEF00748F80 /* SDK */,
 				49C2D0981EB03EAD0092039A /* Essence */,
 				49C2D0AA1EB03EAD0092039A /* New */,
 				49C2D09E1EB03EAD0092039A /* Follow */,
@@ -544,6 +533,31 @@
 				491AB3131EEF069E00112205 /* BYExtensionConfig.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		49D758631EFA3FEF00748F80 /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				49D758641EFA3FEF00748F80 /* Required */,
+				49D758661EFA3FEF00748F80 /* SMSSDK */,
+			);
+			path = SDK;
+			sourceTree = "<group>";
+		};
+		49D758641EFA3FEF00748F80 /* Required */ = {
+			isa = PBXGroup;
+			children = (
+				49D758651EFA3FEF00748F80 /* MOBFoundation.framework */,
+			);
+			path = Required;
+			sourceTree = "<group>";
+		};
+		49D758661EFA3FEF00748F80 /* SMSSDK */ = {
+			isa = PBXGroup;
+			children = (
+				49D758671EFA3FEF00748F80 /* SMS_SDK.framework */,
+			);
+			path = SMSSDK;
 			sourceTree = "<group>";
 		};
 		C15249EAB771FF7B30A10450 /* Pods */ = {
@@ -852,6 +866,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BYBestThink/Classes/SDK/SMS_SDK",
+					"$(PROJECT_DIR)/BYBestThink/Classes/SDK/Required",
+					"$(PROJECT_DIR)/BYBestThink/Classes/SDK/SMSSDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = BYBestThink/Classes/Other/PrefixHeader.pch;
@@ -873,6 +889,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BYBestThink/Classes/SDK/SMS_SDK",
+					"$(PROJECT_DIR)/BYBestThink/Classes/SDK/Required",
+					"$(PROJECT_DIR)/BYBestThink/Classes/SDK/SMSSDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = BYBestThink/Classes/Other/PrefixHeader.pch;

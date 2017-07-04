@@ -29,7 +29,7 @@
     // 显示窗口
     [self.window makeKeyAndVisible];
     
-    [SMSSDK registerApp:SMSAppKey withSecret:SMSAppSecret];
+//    [SMSSDK registerApp:SMSAppKey withSecret:SMSAppSecret];
     return YES;
 }
 

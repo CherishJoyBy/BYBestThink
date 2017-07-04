@@ -7,12 +7,8 @@
 //
 
 #import "BYLoginRegisterTextField.h"
-//#import <objc/runtime.h>
 
 @interface BYLoginRegisterTextField ()
-
-@property (nonatomic, strong) id observer;
-@property (nonatomic, strong) id observer2;
 
 @end
 
@@ -23,6 +19,7 @@
     [super awakeFromNib];
     
     self.tintColor = [UIColor whiteColor];
+    self.placeholderColor = [UIColor grayColor];
 }
 
 - (BOOL)becomeFirstResponder

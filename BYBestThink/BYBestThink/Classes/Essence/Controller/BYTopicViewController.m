@@ -78,16 +78,33 @@ static NSString * const BYTopicCellId = @"BYTopicCell";
 - (void)loadNewTopics
 {
     // 取消所有请求任务
-    [[BYHTTPSessionManager sharedHTTPSessionManager].tasks makeObjectsPerformSelector:@selector(cancel)];
+//    [[BYHTTPSessionManager sharedHTTPSessionManager].tasks makeObjectsPerformSelector:@selector(cancel)];
+    [BYHTTPSessionManager cancelAllTasks];
     
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = self.aParam;
     params[@"c"] = @"data";
     params[@"type"] = @(self.type);
     
-    NSLog(@"%@",params);
+//    BYLog(@"%@",params);
     
-    [[BYHTTPSessionManager sharedHTTPSessionManager] GET:BYCommonURL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *  _Nullable responseObject) {
+//    [[BYHTTPSessionManager sharedHTTPSessionManager] GET:BYCommonURL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *  _Nullable responseObject) {
+//        self.maxtime = responseObject[@"info"][@"maxtime"];
+//        
+//        self.topics = [BYTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+//        
+//        [self.tableView reloadData];
+//        
+//        [self.tableView.mj_header endRefreshing];
+//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//        
+//        BYLog(@"请求失败 - %@", error);
+//        [self.tableView.mj_header endRefreshing];
+//    }];
+    
+    
+    [BYHTTPSessionManager GET:BYCommonURL params:params successBlock:^(id responseObject) {
+        
         self.maxtime = responseObject[@"info"][@"maxtime"];
         
         self.topics = [BYTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
@@ -95,15 +112,18 @@ static NSString * const BYTopicCellId = @"BYTopicCell";
         [self.tableView reloadData];
         
         [self.tableView.mj_header endRefreshing];
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    } failureBlock:^(NSError *error) {
         
         BYLog(@"请求失败 - %@", error);
         [self.tableView.mj_header endRefreshing];
+
     }];
 }
 
 - (NSString *)aParam
 {
+//    BYLog(@"%@",self.parentViewController);
     if (self.parentViewController.class == [BYNewViewController class])
     {
         return @"newlist";
@@ -114,7 +134,8 @@ static NSString * const BYTopicCellId = @"BYTopicCell";
 - (void)loadMoreTopics
 {
     // 取消所有请求任务
-    [[BYHTTPSessionManager sharedHTTPSessionManager].tasks makeObjectsPerformSelector:@selector(cancel)];
+//    [[BYHTTPSessionManager sharedHTTPSessionManager].tasks makeObjectsPerformSelector:@selector(cancel)];
+    [BYHTTPSessionManager cancelAllTasks];
     
     // 参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
@@ -123,7 +144,24 @@ static NSString * const BYTopicCellId = @"BYTopicCell";
     params[@"maxtime"] = self.maxtime;
     params[@"type"] = @(self.type);
     
-    [[BYHTTPSessionManager sharedHTTPSessionManager] GET:BYCommonURL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *  _Nullable responseObject) {
+//    [[BYHTTPSessionManager sharedHTTPSessionManager] GET:BYCommonURL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *  _Nullable responseObject) {
+//        
+//        self.maxtime = responseObject[@"info"][@"maxtime"];
+//        
+//        NSArray<BYTopic *> *moreTopics = [BYTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+//        [self.topics addObjectsFromArray:moreTopics];
+//        
+//        [self.tableView reloadData];
+//        
+//        [self.tableView.mj_footer endRefreshing];
+//        
+//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//        
+//        BYLog(@"请求失败 - %@", error);
+//        [self.tableView.mj_footer endRefreshing];
+//    }];
+    
+    [BYHTTPSessionManager GET:BYCommonURL params:params successBlock:^(id responseObject) {
         
         self.maxtime = responseObject[@"info"][@"maxtime"];
         
@@ -134,11 +172,13 @@ static NSString * const BYTopicCellId = @"BYTopicCell";
         
         [self.tableView.mj_footer endRefreshing];
         
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+    } failureBlock:^(NSError *error) {
         
         BYLog(@"请求失败 - %@", error);
         [self.tableView.mj_footer endRefreshing];
+        
     }];
+    
 }
 
 #pragma mark - Table view data source

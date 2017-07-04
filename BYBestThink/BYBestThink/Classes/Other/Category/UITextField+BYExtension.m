@@ -22,7 +22,7 @@ static NSString * const kPlaceholderColor = @"placeholderLabel.textColor";
     // 还原默认占位文字的颜色
     if (placeholderColor == nil)
     {
-        [self setValue:[UIColor colorWithRed:0 green:0 blue:0.0980392 alpha:0.22] forKeyPath:kPlaceholderColor];
+        placeholderColor = [UIColor colorWithRed:0 green:0 blue:0.0980392 alpha:0.22];
     }
     
     [self setValue:placeholderColor forKeyPath:kPlaceholderColor];

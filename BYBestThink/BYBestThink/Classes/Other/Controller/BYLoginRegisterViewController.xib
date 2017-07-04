@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,6 +13,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BYLoginRegisterViewController">
             <connections>
                 <outlet property="leftMargin" destination="6Wk-RI-qFu" id="ygc-Fk-sZh"/>
+                <outlet property="phoneNumberTextF" destination="mYv-az-BdT" id="PoS-uF-Xvr"/>
+                <outlet property="vertificationCodeTextF" destination="INQ-pz-blv" id="JlE-lj-gw4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -103,9 +105,9 @@
                                 <constraint firstAttribute="height" constant="92" id="vNn-CA-s2F"/>
                             </constraints>
                         </imageView>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="手机号" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="NRl-mz-Swq" customClass="BYLoginRegisterTextField">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="手机号" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="NRl-mz-Swq" customClass="BYLoginRegisterTextField">
                             <rect key="frame" x="37" y="0.0" width="246" height="46"/>
-                            <nil key="textColor"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                         </textField>
@@ -138,7 +140,7 @@
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
-                                <action selector="forgetPassword" destination="-1" eventType="touchUpInside" id="rpL-xZ-pNr"/>
+                                <action selector="forgetPasswordBtnClick" destination="-1" eventType="touchUpInside" id="qsQ-bv-9bG"/>
                             </connections>
                         </button>
                     </subviews>
@@ -193,12 +195,16 @@
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <state key="normal" title="获取验证码" backgroundImage="login_register_button"/>
+                            <state key="highlighted" backgroundImage="login_register_button_click"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                     <integer key="value" value="5"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="getVerificationCodeBtnClick" destination="-1" eventType="touchUpInside" id="8Gi-un-rHJ"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U51-H4-Qrd" userLabel="注册">
                             <rect key="frame" x="27" y="142" width="266" height="30"/>
@@ -216,6 +222,9 @@
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="registerBtnClick:" destination="-1" eventType="touchUpInside" id="oOb-CK-EVv"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -254,7 +263,7 @@
                 <constraint firstItem="HVT-9F-PNB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="sYZ-ES-Ucy"/>
                 <constraint firstItem="HVT-9F-PNB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="vK4-gB-STu"/>
             </constraints>
-            <point key="canvasLocation" x="-56" y="-105"/>
+            <point key="canvasLocation" x="31" y="-202"/>
         </view>
     </objects>
     <resources>
